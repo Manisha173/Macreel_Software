@@ -599,23 +599,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hp\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Himansu_Projects\\Macreel\\Macreel_Software\\Macreel_Software.DAL\\Macreel_Software.DAL.csproj",
+      "projectUniqueName": "Z:\\Ankit Projects\\Macreel_Software\\Macreel_Software.DAL\\Macreel_Software.DAL.csproj",
       "projectName": "Macreel_Software.DAL",
-      "projectPath": "D:\\Himansu_Projects\\Macreel\\Macreel_Software\\Macreel_Software.DAL\\Macreel_Software.DAL.csproj",
-      "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "D:\\Himansu_Projects\\Macreel\\Macreel_Software\\Macreel_Software.DAL\\obj\\",
+      "projectPath": "Z:\\Ankit Projects\\Macreel_Software\\Macreel_Software.DAL\\Macreel_Software.DAL.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "Z:\\Ankit Projects\\Macreel_Software\\Macreel_Software.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -624,18 +624,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Himansu_Projects\\Macreel\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj": {
-              "projectPath": "D:\\Himansu_Projects\\Macreel\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj"
+            "Z:\\Ankit Projects\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj": {
+              "projectPath": "Z:\\Ankit Projects\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj"
             },
-            "D:\\Himansu_Projects\\Macreel\\Macreel_Software\\Macreel_Software.Services\\Macreel_Software.Services.csproj": {
-              "projectPath": "D:\\Himansu_Projects\\Macreel\\Macreel_Software\\Macreel_Software.Services\\Macreel_Software.Services.csproj"
+            "Z:\\Ankit Projects\\Macreel_Software\\Macreel_Software.Services\\Macreel_Software.Services.csproj": {
+              "projectPath": "Z:\\Ankit Projects\\Macreel_Software\\Macreel_Software.Services\\Macreel_Software.Services.csproj"
             }
           }
         }

@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:54266",
 "RedirectUrl": "",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "D:\\Himansu_Projects\\Macreel\\Macreel_Software\\Macreel_Software.Server\\..\\macreel_software.client",
+"WorkingDirectory": "Z:\\Ankit Projects\\Macreel_Software\\Macreel_Software.Server\\..\\macreel_software.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }
