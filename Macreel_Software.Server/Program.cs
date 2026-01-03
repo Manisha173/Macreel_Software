@@ -1,7 +1,9 @@
-﻿using Macreel_Software.DAL;
+﻿using System.Text;
+using Macreel_Software.DAL;
+using Macreel_Software.DAL.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
+using Macreel_Software.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +24,7 @@ builder.Services.AddCors(options =>
 
 });
 
-var key = Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"]);
+var key = Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]);
 
 //Jwt Authentication Configuration
 builder.Services.AddAuthentication(options =>
@@ -59,6 +61,10 @@ builder.Services.AddAuthentication(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IAuthServices, AuthServices>();
+builder.Services.AddScoped<JwtTokenProvider>();
+
 
 var app = builder.Build();
 
