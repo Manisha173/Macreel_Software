@@ -1,0 +1,40 @@
+
+  /* Custom scrollbar for sidebar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #4a5568 transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4a5568;
+    border-radius: 2px;
+  }
+
+  /* Smooth transitions */
+  aside {
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Menu hover effects */
+  #menu li button:hover svg,
+  #menu li a:hover svg {
+    color: white;
+  }
+
+  /* Submenu animation */
+  #menu ul {
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Icon rotations */
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
