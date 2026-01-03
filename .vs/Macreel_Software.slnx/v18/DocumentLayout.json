@@ -1,6 +1,5 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\deep work\\.netProject\\Macreel_Software\\",
   "Documents": [
     {
@@ -28,10 +27,6 @@
       "RelativeMoniker": "D:0:0:{65F04315-8379-0D0C-6131-78AC87D537EC}|Macreel_Software.Models\\Macreel_Software.Models.csproj|solutionrelative:macreel_software.models\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
-=======
-  "WorkspaceRootPath": "D:\\Manisha\\Macreel_Software\\",
-  "Documents": [],
->>>>>>> 5ce264b5ed762febc643ef926944b11f07ccd482
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -39,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +65,6 @@
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-<<<<<<< HEAD
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "login.component.html",
@@ -142,10 +136,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-02T11:24:44.966Z"
-=======
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
->>>>>>> 5ce264b5ed762febc643ef926944b11f07ccd482
             }
           ]
         }
