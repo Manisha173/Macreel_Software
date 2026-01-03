@@ -58,6 +58,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.0.0-preview3.25342.7, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[10.0.1, )"
@@ -280,7 +284,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj": {
+                "projectPath": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -298,6 +306,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.12.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

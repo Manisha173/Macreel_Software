@@ -1,2 +1,0 @@
-D:\Himansu_Projects\Macreel\Macreel_Software\macreel_software.client\obj\Debug\macreel_software.client.esproj.CoreCompileInputs.cache
-D:\deep work\.netProject\Macreel_Software\macreel_software.client\obj\Debug\macreel_software.client.esproj.CoreCompileInputs.cache
