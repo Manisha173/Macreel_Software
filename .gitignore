@@ -1,5 +1,5 @@
 ##################################################
-# VISUAL STUDIO 2022 / 2025
+# VISUAL STUDIO (Windows)
 ##################################################
 
 .vs/
@@ -23,8 +23,11 @@
 **/ARM/
 **/ARM64/
 
+# Auto-generated MSBuild files
+**/*.GeneratedMSBuildEditorConfig.editorconfig
+
 ##################################################
-# SOLUTION / MSBUILD LOGS
+# DOTNET / MSBUILD LOGS
 ##################################################
 
 *.binlog
@@ -34,24 +37,26 @@
 # NUGET
 ##################################################
 
-**/packages/*
-!**/packages/build/
+**/packages/
 *.nupkg
 *.snupkg
 *.nuget.props
 *.nuget.targets
 
 ##################################################
-# ASP.NET SERVER (Macreel_Software.Server)
+# ASP.NET CORE SERVER
+# (Macreel_Software.Server)
 ##################################################
 
 Macreel_Software.Server/appsettings.Development.json
 Macreel_Software.Server/appsettings.Staging.json
+
 Macreel_Software.Server/wwwroot/dist/
 Macreel_Software.Server/wwwroot/*.map
 
 ##################################################
-# ANGULAR CLIENT (macreel_software.client)
+# ANGULAR CLIENT (Windows)
+# (macreel_software.client)
 ##################################################
 
 macreel_software.client/node_modules/
@@ -60,20 +65,12 @@ macreel_software.client/.angular/
 macreel_software.client/.cache/
 macreel_software.client/.vscode/
 
-# Angular build artifacts
 macreel_software.client/out-tsc/
 macreel_software.client/npm-debug.log*
 macreel_software.client/yarn-error.log*
 
 ##################################################
-# VISUAL STUDIO + ANGULAR INTEGRATION
-##################################################
-
-*.esproj
-*.esproj.user
-
-##################################################
-# ENV / SECRETS (VERY IMPORTANT)
+# ENVIRONMENT / SECRETS
 ##################################################
 
 .env
@@ -84,6 +81,14 @@ secrets.json
 *.publishsettings
 
 ##################################################
+# WINDOWS OS FILES
+##################################################
+
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+##################################################
 # DATABASE FILES
 ##################################################
 
@@ -92,30 +97,7 @@ secrets.json
 *.ndf
 
 ##################################################
-# OS FILES
-##################################################
-
-# Windows
-Thumbs.db
-Desktop.ini
-
-# macOS
-.DS_Store
-
-# Linux
-*~
-
-##################################################
 # GITHUB / CI
 ##################################################
 
 .github/workflows/*.local.yml
-
-##################################################
-# OPTIONAL (UNCOMMENT IF NEEDED)
-##################################################
-
-# If Angular build is copied to server manually
-# Macreel_Software.Server/wwwroot/
-
-/Macreel_Software.DAL/obj/Debug/net8.0/Macreel_Software.DAL.GeneratedMSBuildEditorConfig.editorconfig
