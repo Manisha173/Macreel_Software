@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj": {}
+    "D:\\Manisha\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj": {}
   },
   "projects": {
-    "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj": {
+    "D:\\Manisha\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj",
+        "projectUniqueName": "D:\\Manisha\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj",
         "projectName": "Macreel_Software.Models",
-        "projectPath": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj",
-        "packagesPath": "C:\\Users\\macre\\.nuget\\packages\\",
-        "outputPath": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\obj\\",
+        "projectPath": "D:\\Manisha\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Manisha\\Macreel_Software\\Macreel_Software.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\macre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

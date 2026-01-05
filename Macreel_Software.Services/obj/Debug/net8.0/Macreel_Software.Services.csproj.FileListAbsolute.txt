@@ -33,3 +33,38 @@ D:\deep work\.netProject\Macreel_Software\Macreel_Software.Services\obj\Debug\ne
 D:\deep work\.netProject\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\refint\Macreel_Software.Services.dll
 D:\deep work\.netProject\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\Macreel_Software.Services.pdb
 D:\deep work\.netProject\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\ref\Macreel_Software.Services.dll
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-Black.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-BlackItalic.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-Bold.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-BoldItalic.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-ExtraBold.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-ExtraBoldItalic.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-ExtraLight.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-ExtraLightItalic.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-Italic.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-Light.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-LightItalic.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-Medium.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-MediumItalic.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-Regular.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-SemiBold.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-SemiBoldItalic.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-Thin.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\Lato-ThinItalic.ttf
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\LatoFont\OFL.txt
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\Macreel_Software.Services.deps.json
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\Macreel_Software.Services.dll
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\Macreel_Software.Services.pdb
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\Macreel_Software.Models.dll
+D:\Manisha\Macreel_Software\Macreel_Software.Services\bin\Debug\net8.0\Macreel_Software.Models.pdb
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\Macreel_Software.Services.csproj.AssemblyReference.cache
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\Macreel_Software.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\Macreel_Software.Services.AssemblyInfoInputs.cache
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\Macreel_Software.Services.AssemblyInfo.cs
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\Macreel_Software.Services.csproj.CoreCompileInputs.cache
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\Macreel_Software.Services.sourcelink.json
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\Macreel_.91C9C4D4.Up2Date
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\Macreel_Software.Services.dll
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\refint\Macreel_Software.Services.dll
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\Macreel_Software.Services.pdb
+D:\Manisha\Macreel_Software\Macreel_Software.Services\obj\Debug\net8.0\ref\Macreel_Software.Services.dll

@@ -1,32 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\deep work\\.netProject\\Macreel_Software\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{46FFF03C-39A2-81A5-9003-0682DCCD5806}|macreel_software.client\\macreel_software.client.esproj|d:\\deep work\\.netproject\\macreel_software\\macreel_software.client\\src\\app\\feature\\auth\\login\\login.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{46FFF03C-39A2-81A5-9003-0682DCCD5806}|macreel_software.client\\macreel_software.client.esproj|solutionrelative:macreel_software.client\\src\\app\\feature\\auth\\login\\login.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B78FAED6-E976-9AF0-7920-39D2F8AD71F4}|Macreel_Software.Services\\Macreel_Software.Services.csproj|d:\\deep work\\.netproject\\macreel_software\\macreel_software.services\\macreel_software.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B78FAED6-E976-9AF0-7920-39D2F8AD71F4}|Macreel_Software.Services\\Macreel_Software.Services.csproj|solutionrelative:macreel_software.services\\macreel_software.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4302B2B-877E-EBB6-A173-C32263D0A774}|Macreel_Software.Server\\Macreel_Software.Server.csproj|d:\\deep work\\.netproject\\macreel_software\\macreel_software.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4302B2B-877E-EBB6-A173-C32263D0A774}|Macreel_Software.Server\\Macreel_Software.Server.csproj|solutionrelative:macreel_software.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4302B2B-877E-EBB6-A173-C32263D0A774}|Macreel_Software.Server\\Macreel_Software.Server.csproj|d:\\deep work\\.netproject\\macreel_software\\macreel_software.server\\macreel_software.server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{F4302B2B-877E-EBB6-A173-C32263D0A774}|Macreel_Software.Server\\Macreel_Software.Server.csproj|solutionrelative:macreel_software.server\\macreel_software.server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4302B2B-877E-EBB6-A173-C32263D0A774}|Macreel_Software.Server\\Macreel_Software.Server.csproj|d:\\deep work\\.netproject\\macreel_software\\macreel_software.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4302B2B-877E-EBB6-A173-C32263D0A774}|Macreel_Software.Server\\Macreel_Software.Server.csproj|solutionrelative:macreel_software.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65F04315-8379-0D0C-6131-78AC87D537EC}|Macreel_Software.Models\\Macreel_Software.Models.csproj|d:\\deep work\\.netproject\\macreel_software\\macreel_software.models\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65F04315-8379-0D0C-6131-78AC87D537EC}|Macreel_Software.Models\\Macreel_Software.Models.csproj|solutionrelative:macreel_software.models\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\Manisha\\Macreel_Software\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,77 +40,8 @@
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "login.component.html",
-              "DocumentMoniker": "D:\\deep work\\.netProject\\Macreel_Software\\macreel_software.client\\src\\app\\feature\\auth\\login\\login.component.html",
-              "RelativeDocumentMoniker": "macreel_software.client\\src\\app\\feature\\auth\\login\\login.component.html",
-              "ToolTip": "D:\\deep work\\.netProject\\Macreel_Software\\macreel_software.client\\src\\app\\feature\\auth\\login\\login.component.html",
-              "RelativeToolTip": "macreel_software.client\\src\\app\\feature\\auth\\login\\login.component.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-01-03T06:10:16.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Macreel_Software.Services.csproj",
-              "DocumentMoniker": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Services\\Macreel_Software.Services.csproj",
-              "RelativeDocumentMoniker": "Macreel_Software.Services\\Macreel_Software.Services.csproj",
-              "ToolTip": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Services\\Macreel_Software.Services.csproj",
-              "RelativeToolTip": "Macreel_Software.Services\\Macreel_Software.Services.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-02T11:41:06.094Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Server\\Program.cs",
-              "RelativeDocumentMoniker": "Macreel_Software.Server\\Program.cs",
-              "ToolTip": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Server\\Program.cs",
-              "RelativeToolTip": "Macreel_Software.Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T11:40:43.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Macreel_Software.Server.http",
-              "DocumentMoniker": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Server\\Macreel_Software.Server.http",
-              "RelativeDocumentMoniker": "Macreel_Software.Server\\Macreel_Software.Server.http",
-              "ToolTip": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Server\\Macreel_Software.Server.http",
-              "RelativeToolTip": "Macreel_Software.Server\\Macreel_Software.Server.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-01-02T11:40:40.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Server\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Macreel_Software.Server\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Server\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Macreel_Software.Server\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T11:40:21.808Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserData.cs",
-              "DocumentMoniker": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\UserData.cs",
-              "RelativeDocumentMoniker": "Macreel_Software.Models\\UserData.cs",
-              "ToolTip": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\UserData.cs",
-              "RelativeToolTip": "Macreel_Software.Models\\UserData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T11:24:44.966Z"
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }

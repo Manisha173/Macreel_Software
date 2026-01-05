@@ -1,1 +1,2 @@
 D:\deep work\.netProject\Macreel_Software\macreel_software.client\obj\Debug\macreel_software.client.esproj.CoreCompileInputs.cache
+D:\Manisha\Macreel_Software\macreel_software.client\obj\Debug\macreel_software.client.esproj.CoreCompileInputs.cache
