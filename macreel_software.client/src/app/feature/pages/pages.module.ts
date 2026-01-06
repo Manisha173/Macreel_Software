@@ -7,11 +7,11 @@ import { PagesRoutingModule } from './pages-routing.module';
 
 @NgModule({
   declarations: [
-  
   ],
-  imports: [
-    CommonModule,
+  imports: [ 
+    CommonModule, 
     PagesRoutingModule
+    
   ]
 })
 export class PagesModule { }

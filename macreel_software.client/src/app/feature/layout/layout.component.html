@@ -3,8 +3,7 @@
   <aside class="bg-white shadow-lg transition-all  duration-300" [ngClass]="sidebarOpen ? 'w-[265px]' : 'w-[72px]'">
 
     <div class="flex items-center gap-3 px-4 pt-2 pb-2">
-      <img src="assets/images/macreel-infosoft-logo.png" alt="Macreel InfoSoft"
-        class="w-10 h-10 object-contain rounded-xl" />
+      <img src="assets/images/logo.png" alt="Macreel InfoSoft" class="w-10 h-10 object-contain rounded-xl" />
 
       <span *ngIf="sidebarOpen" class="text-xl font-bold whitespace-nowrap">
         Macreel InfoSoft
@@ -26,41 +25,60 @@
         </div>
       </div>
 
+          <!-- Master Management -->
+   <div>
+  <div (click)="toggleMenu('charts')"
+    class="group flex items-center justify-between p-3 rounded-lg cursor-pointer">
+
+    <!-- LEFT SIDE (ICON + TEXT) -->
+    <div class="flex items-center gap-3">
+      <i class="nav-icon fas fa-id-card"></i>
+
+      <span *ngIf="sidebarOpen"
+        class="group-hover:text-[#E6354B] transition whitespace-nowrap">
+        Master
+      </span>
+    </div>
+
+    <!-- RIGHT SIDE (ARROW) -->
+    <span *ngIf="sidebarOpen"
+      class="font-bold text-lg transition-transform duration-300
+             group-hover:text-[#E6354B]"
+      [ngClass]="openMenu === 'charts' ? 'rotate-90' : 'rotate-0'">
+      &gt;
+    </span>
+  </div>
+
+  <!-- SUB MENU -->
+  <div *ngIf="openMenu === 'charts' && sidebarOpen" class="ml-10 mt-1 space-y-1 text-sm">
+    <a routerLink="/home/add-role" class="block p-2 rounded hover:text-[#E6354B] transition">
+      Add Role
+    </a>
+
+    <a routerLink="/home/add-designation" class="block p-2 rounded hover:text-[#E6354B] transition">
+      Add Designation
+    </a>
+
+    <a routerLink="/home/add-department"
+       class="block p-2 rounded hover:text-[#E6354B] transition">
+      Add Department
+    </a>
+  </div>
+</div>
+
+
       <div (click)="toggleMenu('apps')" routerLink="/home/employee-task-sheet"
         class="group flex items-center justify-between p-3 rounded-lg cursor-pointer">
 
         <div class="flex items-center gap-3">
-          <i class="fa-solid fa-building-user xicon text-[#E6354B]"></i>
+          <i class="fa-solid fa-building-user xicon"></i>
           <span *ngIf="sidebarOpen" class="group-hover:text-[#E6354B] transition">
             Employee Task Sheet
           </span>
         </div>
       </div>
 
-      <!-- Department Management -->
-      <div>
-        <div (click)="toggleMenu('charts')"
-          class="group flex items-center justify-between p-3 rounded-lg cursor-pointer">
-          <i class="nav-icon fas fa-id-card  text-[#E6354B]"></i>
-          <div class="flex items-center gap-3">
 
-            <span *ngIf="sidebarOpen" class="group-hover:text-[#E6354B] transition">
-              Department Management
-            </span>
-          </div>
-
-          <span *ngIf="sidebarOpen" class="font-bold text-lg transition-transform duration-300
-               group-hover:text-[#E6354B]" [ngClass]="openMenu === 'charts' ? 'rotate-90' : 'rotate-0'">
-            >
-          </span>
-        </div>
-
-        <div routerLink="/home/add-department" *ngIf="openMenu === 'charts' && sidebarOpen"
-          class="ml-10 mt-1 space-y-1 text-sm">
-          <a class="block p-2 rounded cursor-pointer hover:text-[#E6354B] transition">Add Department</a>
-
-        </div>
-      </div>
 
       <!-- PLUGINS -->
       <div>
@@ -114,16 +132,19 @@
           <!-- Search Icon -->
           <span class="absolute left-3 top-1/2 -translate-y-1/2
              text-gray-400">
-            🔍
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+
           </span>
         </div>
 
         <!-- NOTIFICATION -->
         <div class="relative w-10 h-10 flex items-center justify-center
            rounded-xl bg-[#FDECEA] cursor-pointer
-           hover:bg-[#E6354B] transition">
+            transition">
 
-          🔔
+          <i class="fa-solid fa-bell text-[#E6354B]"></i>
+
           <span class="absolute top-1 right-1 w-2.5 h-2.5
              bg-[#E6354B] rounded-full">
           </span>
@@ -131,10 +152,9 @@
 
         <!-- MESSAGE -->
         <div class="relative w-10 h-10 flex items-center justify-center
-           rounded-xl bg-[#FDECEA] cursor-pointer
-           hover:bg-[#E6354B] transition">
+           rounded-xl bg-[#FDECEA] cursor-pointer">
 
-          💬
+          <i class="fa-regular fa-message text-[#E6354B]"></i>
           <span class="absolute top-1 right-1 w-2.5 h-2.5
              bg-[#E6354B] rounded-full">
           </span>
