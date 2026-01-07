@@ -2822,23 +2822,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {},
+    "C:\\Users\\macre\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.DAL\\Macreel_Software.DAL.csproj",
+      "projectUniqueName": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.DAL\\Macreel_Software.DAL.csproj",
       "projectName": "Macreel_Software.DAL",
-      "projectPath": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.DAL\\Macreel_Software.DAL.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.DAL\\obj\\",
+      "projectPath": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.DAL\\Macreel_Software.DAL.csproj",
+      "packagesPath": "C:\\Users\\macre\\.nuget\\packages\\",
+      "outputPath": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\macre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2854,11 +2854,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj": {
-              "projectPath": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj"
+            "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj": {
+              "projectPath": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj"
             },
-            "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Services\\Macreel_Software.Services.csproj": {
-              "projectPath": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Services\\Macreel_Software.Services.csproj"
+            "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Services\\Macreel_Software.Services.csproj": {
+              "projectPath": "D:\\deep work\\.netProject\\Macreel_Software\\Macreel_Software.Services\\Macreel_Software.Services.csproj"
             }
           }
         }

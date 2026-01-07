@@ -1,15 +1,3 @@
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\bin\Debug\net8.0\Macreel_Software.Models.deps.json
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\bin\Debug\net8.0\Macreel_Software.Models.dll
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\bin\Debug\net8.0\Macreel_Software.Models.pdb
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.GeneratedMSBuildEditorConfig.editorconfig
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.AssemblyInfoInputs.cache
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.AssemblyInfo.cs
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.csproj.CoreCompileInputs.cache
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.sourcelink.json
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.dll
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\refint\Macreel_Software.Models.dll
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.pdb
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\ref\Macreel_Software.Models.dll
 D:\Manisha\Macreel_Software\Macreel_Software.Models\bin\Debug\net8.0\Macreel_Software.Models.deps.json
 D:\Manisha\Macreel_Software\Macreel_Software.Models\bin\Debug\net8.0\Macreel_Software.Models.dll
 D:\Manisha\Macreel_Software\Macreel_Software.Models\bin\Debug\net8.0\Macreel_Software.Models.pdb
@@ -34,3 +22,15 @@ D:\Macreel-Software\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Ma
 D:\Macreel-Software\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\refint\Macreel_Software.Models.dll
 D:\Macreel-Software\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.pdb
 D:\Macreel-Software\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\ref\Macreel_Software.Models.dll
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\bin\Debug\net8.0\Macreel_Software.Models.deps.json
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\bin\Debug\net8.0\Macreel_Software.Models.dll
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\bin\Debug\net8.0\Macreel_Software.Models.pdb
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.AssemblyInfoInputs.cache
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.AssemblyInfo.cs
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.csproj.CoreCompileInputs.cache
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.sourcelink.json
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.dll
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\refint\Macreel_Software.Models.dll
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.pdb
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\ref\Macreel_Software.Models.dll

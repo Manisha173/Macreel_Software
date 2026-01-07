@@ -1,174 +1,129 @@
-<div class="flex h-screen bg-[#f6f7fb]">
+<div class="flex h-screen bg-[#f6f7fb] overflow-hidden">
 
-  <aside class="bg-white shadow-lg transition-all  duration-300" [ngClass]="sidebarOpen ? 'w-[265px]' : 'w-[72px]'">
+  <!-- MOBILE OVERLAY -->
+  <div
+    *ngIf="sidebarOpen && isMobile"
+    (click)="closeSidebarOnMobile()"
+    class="fixed inset-0 bg-black/40 z-30 md:hidden">
+  </div>
 
-    <div class="flex items-center gap-3 px-4 pt-2 pb-2">
-      <img src="assets/images/logo.png" alt="Macreel InfoSoft" class="w-10 h-10 object-contain rounded-xl" />
+  <!-- SIDEBAR -->
+  <aside
+    class="bg-white shadow-lg z-40 h-full transition-all duration-300
+           fixed md:relative"
+    [ngClass]="{
+      'w-[265px] translate-x-0': sidebarOpen,
+      'w-[72px] -translate-x-full md:translate-x-0 md:w-[72px]': !sidebarOpen
+    }">
 
-      <span *ngIf="sidebarOpen" class="text-xl font-bold whitespace-nowrap">
+    <!-- LOGO -->
+    <div class="flex items-center gap-3 px-4 py-3 border-b">
+      <img src="assets/images/logo.png" class="w-10 h-10 rounded-xl" />
+      <span *ngIf="sidebarOpen" class="text-lg font-bold whitespace-nowrap">
         Macreel InfoSoft
       </span>
     </div>
 
-    <hr class="border-gray-200 mt-0">
-    <nav class="mt-6 px-3 space-y-1 text-[#7E7E7E] text-[13px] font-medium whitespace-nowrap">
-      <div>
-        <div (click)="toggleMenu('dashboard')" class="group flex items-center justify-between p-3 rounded-lg cursor-pointer
-             hover:bg-transparent">
+    <!-- MENU -->
+    <nav class="mt-4 px-3 text-[13px] font-medium text-[#7E7E7E] space-y-1">
 
-          <div routerLink="/home/dashboard" class="flex items-center gap-3">
-            <span class="group-hover:text-[#E6354B] transition">🏠</span>
-            <span *ngIf="sidebarOpen" class="text-[#7E7E7E] group-hover:text-[#E6354B] transition">
-              Dashboard
-            </span>
-          </div>
-        </div>
+      <!-- DASHBOARD -->
+      <div
+        routerLink="/home/dashboard"
+        (click)="closeSidebarOnMobile()"
+        class="flex items-center gap-3 p-2 rounded-lg cursor-pointer hover:bg-[#FDECEA]">
+        <span>🏠</span>
+        <span *ngIf="sidebarOpen">Dashboard</span>
       </div>
 
-          <!-- Master Management -->
-   <div>
-  <div (click)="toggleMenu('charts')"
-    class="group flex items-center justify-between p-3 rounded-lg cursor-pointer">
-
-    <!-- LEFT SIDE (ICON + TEXT) -->
-    <div class="flex items-center gap-3">
-      <i class="nav-icon fas fa-id-card"></i>
-
-      <span *ngIf="sidebarOpen"
-        class="group-hover:text-[#E6354B] transition whitespace-nowrap">
-        Master
-      </span>
-    </div>
-
-    <!-- RIGHT SIDE (ARROW) -->
-    <span *ngIf="sidebarOpen"
-      class="font-bold text-lg transition-transform duration-300
-             group-hover:text-[#E6354B]"
-      [ngClass]="openMenu === 'charts' ? 'rotate-90' : 'rotate-0'">
-      &gt;
-    </span>
-  </div>
-
-  <!-- SUB MENU -->
-  <div *ngIf="openMenu === 'charts' && sidebarOpen" class="ml-10 mt-1 space-y-1 text-sm">
-    <a routerLink="/home/add-role" class="block p-2 rounded hover:text-[#E6354B] transition">
-      Add Role
-    </a>
-
-    <a routerLink="/home/add-designation" class="block p-2 rounded hover:text-[#E6354B] transition">
-      Add Designation
-    </a>
-
-    <a routerLink="/home/add-department"
-       class="block p-2 rounded hover:text-[#E6354B] transition">
-      Add Department
-    </a>
-  </div>
-</div>
-
-
-      <div (click)="toggleMenu('apps')" routerLink="/home/employee-task-sheet"
-        class="group flex items-center justify-between p-3 rounded-lg cursor-pointer">
-
-        <div class="flex items-center gap-3">
-          <i class="fa-solid fa-building-user xicon"></i>
-          <span *ngIf="sidebarOpen" class="group-hover:text-[#E6354B] transition">
-            Employee Task Sheet
-          </span>
-        </div>
-      </div>
-
-
-
-      <!-- PLUGINS -->
+      <!-- MASTER -->
       <div>
-        <div (click)="toggleMenu('plugins')"
-          class="group flex items-center justify-between p-3 rounded-lg cursor-pointer">
+        <div
+          (click)="toggleMenu('master')"
+          class="flex items-center p-2 justify-between rounded-lg cursor-pointer hover:bg-[#FDECEA]">
 
           <div class="flex items-center gap-3">
-            <span class="group-hover:text-[#E6354B] transition">🔌</span>
-            <span *ngIf="sidebarOpen" class="group-hover:text-[#E6354B] transition">
-              Plugins
-            </span>
+            <i class="fas fa-id-card"></i>
+            <span *ngIf="sidebarOpen">Master</span>
           </div>
 
-          <span *ngIf="sidebarOpen" class="font-bold text-lg transition-transform duration-300
-               group-hover:text-[#E6354B]" [ngClass]="openMenu === 'plugins' ? 'rotate-90' : 'rotate-0'">
+          <span *ngIf="sidebarOpen"
+            class="transition-transform"
+            [ngClass]="openMenu === 'master' ? 'rotate-90' : ''">
             >
           </span>
         </div>
 
-        <div *ngIf="openMenu === 'plugins' && sidebarOpen" class="ml-10 mt-1 space-y-1 text-sm">
-          <a class="block p-2 rounded cursor-pointer hover:text-[#E6354B] transition">Forms</a>
-          <a class="block p-2 rounded cursor-pointer hover:text-[#E6354B] transition">Tables</a>
+        <div *ngIf="openMenu === 'master' && sidebarOpen"
+          class="ml-10 space-y-1 text-sm">
+
+          <a routerLink="/home/add-role"
+             (click)="closeSidebarOnMobile()"
+             class="block p-2 hover:text-[#E6354B]">
+            Add Role
+          </a>
+
+          <a routerLink="/home/add-designation"
+             (click)="closeSidebarOnMobile()"
+             class="block p-2 hover:text-[#E6354B]">
+            Add Designation
+          </a>
+
+          <a routerLink="/home/add-department"
+             (click)="closeSidebarOnMobile()"
+             class="block p-2 hover:text-[#E6354B]">
+            Add Department
+          </a>
         </div>
       </div>
 
-    </nav>
+      <!-- EMPLOYEE -->
+      <div
+        routerLink="/home/employee-task-sheet"
+        (click)="closeSidebarOnMobile()"
+        class="flex items-center p-2 gap-3 rounded-lg cursor-pointer hover:bg-[#FDECEA]">
+        <i class="fa-solid fa-building-user"></i>
+        <span *ngIf="sidebarOpen">Employee Task Sheet</span>
+      </div>
 
+    </nav>
   </aside>
 
   <!-- MAIN CONTENT -->
   <div class="flex-1 flex flex-col">
 
     <!-- NAVBAR -->
-    <header class="bg-white shadow-sm px-2 py-1 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <button (click)="toggleSidebar()" class="text-2xl text-[#E6354B] px-3 py-2 rounded-lg ">
+    <header class="bg-white shadow-sm px-3 py-2 flex justify-between items-center">
+
+      <div class="flex items-center gap-3">
+        <!-- TOGGLE BUTTON (ALL SCREENS) -->
+        <button
+          (click)="toggleSidebar()"
+          class="text-2xl text-[#E6354B] p-2 rounded-lg">
           ☰
         </button>
 
-        <h1 class="text-xl font-semibold">Dashboard</h1>
+        <h1 class="text-lg md:text-xl font-semibold">Dashboard</h1>
       </div>
 
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-3">
 
-        <!-- SEARCH BOX -->
-        <div class="relative">
-          <input type="text" placeholder="Search here" class="w-56 pl-10 pr-4 py-2 rounded-xl
-             bg-[#F6F7FB] text-sm outline-none
-             focus:ring-2 focus:ring-[#E6354B]" />
-
-          <!-- Search Icon -->
-          <span class="absolute left-3 top-1/2 -translate-y-1/2
-             text-gray-400">
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-
-          </span>
-        </div>
-
-        <!-- NOTIFICATION -->
-        <div class="relative w-10 h-10 flex items-center justify-center
-           rounded-xl bg-[#FDECEA] cursor-pointer
-            transition">
-
+        <!-- ICONS -->
+        <div class="w-9 h-9 flex items-center justify-center bg-[#FDECEA] rounded-xl">
           <i class="fa-solid fa-bell text-[#E6354B]"></i>
-
-          <span class="absolute top-1 right-1 w-2.5 h-2.5
-             bg-[#E6354B] rounded-full">
-          </span>
         </div>
 
-        <!-- MESSAGE -->
-        <div class="relative w-10 h-10 flex items-center justify-center
-           rounded-xl bg-[#FDECEA] cursor-pointer">
-
+        <div class="w-9 h-9 flex items-center justify-center bg-[#FDECEA] rounded-xl">
           <i class="fa-regular fa-message text-[#E6354B]"></i>
-          <span class="absolute top-1 right-1 w-2.5 h-2.5
-             bg-[#E6354B] rounded-full">
-          </span>
         </div>
 
         <!-- PROFILE -->
-        <div class="w-10 h-10 rounded-full overflow-hidden cursor-pointer">
-          <img src="https://i.pravatar.cc/40" alt="Profile" class="w-full h-full object-cover" />
-        </div>
-
+        <img src="https://i.pravatar.cc/40"
+             class="w-9 h-9 rounded-full cursor-pointer" />
       </div>
-
     </header>
 
+    <!-- PAGE CONTENT -->
     <main class="flex-1 overflow-auto bg-[#f6f7fb]">
       <router-outlet></router-outlet>
     </main>

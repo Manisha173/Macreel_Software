@@ -36,14 +36,14 @@ builder.Services.AddScoped<IMasterService, MasterService>();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll",
-     builder =>
-     {
-         builder.AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader();
-     });
-
+    options.AddPolicy("AllowAngular",
+        policy =>
+        {
+            policy
+                .AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
 });
 
 var key = Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]);
@@ -99,8 +99,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("AllowAngular");
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
 app.UseAuthorization();
 

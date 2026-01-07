@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
@@ -16,7 +17,6 @@ import { AddRoleComponent } from './add-role/add-role.component';
 import { AddDesignationComponent } from './add-designation/add-designation.component';
 
 
-
 @NgModule({
   declarations: [
     EmployeeTaskSheetComponent,
@@ -27,6 +27,7 @@ import { AddDesignationComponent } from './add-designation/add-designation.compo
   ],
   imports: [
     CommonModule,
+    FormsModule, 
     AdminRoutingModule,
 
       /* Material Modules */
