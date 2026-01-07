@@ -1,233 +1,104 @@
 <section class="content pt-3 px-4">
   <!-- Info Boxes Row -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-6">
     
     <!-- Total Employees -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group"> 
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-users"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Total Employees
-        </div>
-        <div class=" text-gray-800 mt-1 truncate">0</div>
-       
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
+  <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start relative group overflow-hidden cursor-pointer">
+  <div>
+    <h3 class="font-semibold text-gray-700 mb-1.5">Project</h3>
+    <p class="text-sm text-gray-600">Total Project : <span class="font-medium">0</span></p>
+    <p class="text-sm text-gray-600">Ongoing :0</p>
+  </div>
+  <div class="text-blue-500 text-3xl p-3">
+    <i class="fa-solid fa-diagram-project"></i>
+  </div>
 
-    <!-- Create & Assign Tasks -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-cyan-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-cyan-500 to-teal-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-tasks"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Create & Assign Tasks
-        </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-    
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-teal-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
+  <!-- Bottom underline -->
+  <span class="absolute bottom-0 left-0 h-1 bg-blue-500 w-0 group-hover:w-full transition-all duration-500"></span>
+</div>
 
-    <!-- Total Projects -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-emerald-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-emerald-500 to-green-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-diagram-project"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Total Projects
-        </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-       
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
 
-    <!-- Ongoing Projects -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-amber-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-amber-500 to-orange-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-gears"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Ongoing Projects
+      <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-1.5">Employee</h3>
+                <p class="text-sm text-gray-600">Total Employee : <span class="font-medium">0</span></p>
+                <p class="text-sm text-gray-600">Absent :0</p>
+            </div>
+            <div class="text-indigo-600 text-3xl text-3xl p-3">
+             
+                <i class="fa-solid fa-user"></i>
+            </div>
         </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-    
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
+
+     <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-1.5">Leave</h3>
+                <p class="text-sm text-gray-600">Upcoming : <span class="font-medium">0</span></p>
+                <p class="text-sm text-gray-600">Request :0</p>
+            </div>
+            <div class="text-orange-500 text-3xl p-3">
+               <i class="fa-solid fa-calendar-days"></i>
+            </div>
+        </div>
+     
 
     <!-- Total Revenue -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-purple-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-purple-500 to-indigo-700 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-chart-line"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Total Revenue
+        <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-1.5">Task</h3>
+                <p class="text-sm text-gray-600">Assign Task : <span class="font-medium">0</span></p>
+                <p class="text-sm text-gray-600">Complete Task :0</p>
+            </div>
+            <div class="text-purple-500 text-3xl p-3">
+                <i class="fa-solid fa-tasks"></i>
+            </div>
         </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-       
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-indigo-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
 
     <!-- Total Purchase -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-cyan-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-cyan-500 to-blue-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Total Purchase
+      <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-1.5">Financial Summary</h3>
+                <p class="text-sm text-gray-600">Total Revenue : <span class="font-medium">0</span></p>
+                <p class="text-sm text-gray-600">Total Purchase :0</p>
+            </div>
+             <div class="text-green-500 text-3xl p-3">
+             <i class="fas fa-money-bill-trend-up"></i>
+            </div>
         </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-    
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
 
-    <!-- Payment Report -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-file-invoice-dollar"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Payment Report
+     <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-1.5">Reports</h3>
+                <p class="text-sm text-gray-600">Payments Report : <span class="font-medium">0</span></p>
+                <p class="text-sm text-gray-600">Attendance Report :0</p>                       
+            </div>
+             <div class="text-teal-500 text-3xl p-3">
+             <i class="fa-solid fa-user-check"></i>
+            </div>
         </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-      
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
 
-    <!-- Pin Login Report -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-green-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-green-500 to-emerald-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-key"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Pin Login Report
+         <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-1.5">Reports</h3>
+                <p class="text-sm text-gray-600">Mid Year Report : <span class="font-medium">0</span></p>
+                <p class="text-sm text-gray-600">One-On-One Report:0</p>
+            </div>
+            <div class="text-indigo-500 text-3xl p-3">
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
         </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-       
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
 
-    <!-- Absent Employee -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-red-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-red-500 to-rose-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-user-xmark"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Absent Employee
+         <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-1.5">Pin Login</h3>
+                <p class="text-sm text-gray-600">Pin Login Report : <span class="font-medium">0</span></p>
+            </div>
+            <div class="text-blue-500 text-3xl p-3">
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
         </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-       
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-rose-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
 
-    <!-- Leave Request -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-teal-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-teal-500 to-cyan-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-calendar-days"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Leave Request
-        </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-        
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
-
-    <!-- Attendance Report -->
-    <div class="card-item bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-emerald-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-emerald-500 to-green-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-user-check"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Attendance Report
-        </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-       
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
-
-    <!-- Upcoming Leaves -->
-    <div class="bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group"
-     style="box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 20px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-pink-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-pink-500 to-rose-500 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-calendar-clock"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Upcoming Leaves
-        </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-        
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-rose-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
-
-    <!-- One-on-One Report -->
-    <div class="bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group"
-     style="box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 20px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-indigo-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-comments"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          One-on-One Report
-        </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-      
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
-
-    <!-- Mid Year Report -->
-    <div class="bg-white rounded-2xl flex items-center p-5 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group"
-     style="box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 20px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;">
-      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent rounded-bl-full opacity-70 group-hover:opacity-100 transition-opacity"></div>
-      <div class="bg-gradient-to-br from-blue-500 to-cyan-600 text-white p-5 rounded-xl flex items-center justify-center text-2xl shadow-md relative z-10">
-        <i class="fa-solid fa-chart-column"></i>
-      </div>
-      <div class="ml-5 flex-1 min-w-0">
-        <div class="text-gray-500 text-sm font-medium uppercase tracking-wide truncate">
-          Mid Year Report
-        </div>
-        <div class=" text-2xl  text-gray-800 mt-1 truncate">0</div>
-       
-      </div>
-      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-    </div>
+   
 
   </div>
 
