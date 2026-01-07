@@ -149,6 +149,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -200,6 +206,9 @@
             "projectReferences": {
               "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.DAL\\Macreel_Software.DAL.csproj": {
                 "projectPath": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.DAL\\Macreel_Software.DAL.csproj"
+              },
+              "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj": {
+                "projectPath": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj"
               }
             }
           }

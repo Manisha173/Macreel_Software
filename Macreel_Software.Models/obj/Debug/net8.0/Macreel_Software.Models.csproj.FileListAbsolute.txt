@@ -34,3 +34,4 @@ D:\Macreel-Software\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Ma
 D:\Macreel-Software\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\refint\Macreel_Software.Models.dll
 D:\Macreel-Software\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.pdb
 D:\Macreel-Software\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\ref\Macreel_Software.Models.dll
+D:\Macreel-Software\Macreel_Software\Macreel_Software.Models\obj\Debug\net8.0\Macreel_Software.Models.csproj.AssemblyReference.cache

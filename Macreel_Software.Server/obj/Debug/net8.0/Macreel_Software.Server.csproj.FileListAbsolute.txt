@@ -442,3 +442,4 @@ D:\Macreel-Software\Macreel_Software\Macreel_Software.Server\obj\Debug\net8.0\re
 D:\Macreel-Software\Macreel_Software\Macreel_Software.Server\obj\Debug\net8.0\Macreel_Software.Server.pdb
 D:\Macreel-Software\Macreel_Software\Macreel_Software.Server\obj\Debug\net8.0\Macreel_Software.Server.genruntimeconfig.cache
 D:\Macreel-Software\Macreel_Software\Macreel_Software.Server\obj\Debug\net8.0\ref\Macreel_Software.Server.dll
+D:\Macreel-Software\Macreel_Software\Macreel_Software.Server\bin\Debug\net8.0\Macreel_Software.Server.staticwebassets.runtime.json
