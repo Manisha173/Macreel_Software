@@ -1,104 +1,206 @@
 <section class="content pt-3 px-4">
   <!-- Info Boxes Row -->
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-6">
-    
+
     <!-- Total Employees -->
-  <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start relative group overflow-hidden cursor-pointer">
-  <div>
-    <h3 class="font-semibold text-gray-700 mb-1.5">Project</h3>
-    <p class="text-sm text-gray-600">Total Project : <span class="font-medium">0</span></p>
-    <p class="text-sm text-gray-600">Ongoing :0</p>
-  </div>
-  <div class="text-blue-500 text-3xl p-3">
-    <i class="fa-solid fa-diagram-project"></i>
-  </div>
+    <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start
+            relative group overflow-hidden
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-xl">
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-1.5">Project</h3>
+        <!-- Clickable lines -->
+        <p class="text-sm text-gray-600 hover:text-blue-500 cursor-pointer transition-colors duration-300">
+          Total Project : <span class="font-medium">0</span>
+        </p>
+        <p class="text-sm text-gray-600 hover:text-blue-500 cursor-pointer transition-colors duration-300">
+          Ongoing :0
+        </p>
+      </div>
+      <div class="text-blue-500 text-3xl p-3">
+        <i class="fa-solid fa-diagram-project"></i>
+      </div>
+      <!-- Bottom underline -->
+      <span class="absolute bottom-0 left-0 h-1 bg-blue-500 w-0 group-hover:w-full transition-all duration-500"></span>
+    </div>
 
-  <!-- Bottom underline -->
-  <span class="absolute bottom-0 left-0 h-1 bg-blue-500 w-0 group-hover:w-full transition-all duration-500"></span>
-</div>
+
+    <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start
+            relative group overflow-hidden
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-xl">
+
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-1.5">Employee</h3>
+
+        <!-- Clickable text only -->
+        <p class="text-sm text-gray-600 hover:text-indigo-600 cursor-pointer transition-colors duration-300">
+          Total Employee : <span class="font-medium">0</span>
+        </p>
+        <p class="text-sm text-gray-600 hover:text-indigo-600 cursor-pointer transition-colors duration-300">
+          Absent : 0
+        </p>
+      </div>
+
+      <div class="text-indigo-600 text-3xl p-3">
+        <i class="fa-solid fa-user"></i>
+      </div>
+
+      <!-- Bottom underline -->
+      <span class="absolute bottom-0 left-0 h-1 bg-indigo-600 w-0 
+               group-hover:w-full transition-all duration-500"></span>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start
+            relative group overflow-hidden
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-xl">
+
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-1.5">Leave</h3>
+
+        <!-- Clickable text only -->
+        <p class="text-sm text-gray-600 hover:text-orange-500 cursor-pointer transition-colors duration-300">
+          Upcoming : <span class="font-medium">0</span>
+        </p>
+        <p class="text-sm text-gray-600 hover:text-orange-500 cursor-pointer transition-colors duration-300">
+          Request : 0
+        </p>
+      </div>
+
+      <div class="text-orange-500 text-3xl p-3">
+        <i class="fa-solid fa-calendar-days"></i>
+      </div>
+
+      <!-- Bottom underline -->
+      <span class="absolute bottom-0 left-0 h-1 bg-orange-500 w-0 
+               group-hover:w-full transition-all duration-500"></span>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start
+            relative group overflow-hidden
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-xl">
+
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-1.5">Task</h3>
+
+        <p class="text-sm text-gray-600 hover:text-purple-500 cursor-pointer transition-colors duration-300">
+          Assign Task : <span class="font-medium">0</span>
+        </p>
+        <p class="text-sm text-gray-600 hover:text-purple-500 cursor-pointer transition-colors duration-300">
+          Complete Task : 0
+        </p>
+      </div>
+
+      <div class="text-purple-500 text-3xl p-3">
+        <i class="fa-solid fa-tasks"></i>
+      </div>
+
+      <span
+        class="absolute bottom-0 left-0 h-1 bg-purple-500 w-0 group-hover:w-full transition-all duration-500"></span>
+    </div>
 
 
-      <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
-            <div>
-                <h3 class="font-semibold text-gray-700 mb-1.5">Employee</h3>
-                <p class="text-sm text-gray-600">Total Employee : <span class="font-medium">0</span></p>
-                <p class="text-sm text-gray-600">Absent :0</p>
-            </div>
-            <div class="text-indigo-600 text-3xl text-3xl p-3">
-             
-                <i class="fa-solid fa-user"></i>
-            </div>
-        </div>
+    <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start
+            relative group overflow-hidden
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-xl">
 
-     <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
-            <div>
-                <h3 class="font-semibold text-gray-700 mb-1.5">Leave</h3>
-                <p class="text-sm text-gray-600">Upcoming : <span class="font-medium">0</span></p>
-                <p class="text-sm text-gray-600">Request :0</p>
-            </div>
-            <div class="text-orange-500 text-3xl p-3">
-               <i class="fa-solid fa-calendar-days"></i>
-            </div>
-        </div>
-     
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-1.5">Financial Summary</h3>
 
-    <!-- Total Revenue -->
-        <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
-            <div>
-                <h3 class="font-semibold text-gray-700 mb-1.5">Task</h3>
-                <p class="text-sm text-gray-600">Assign Task : <span class="font-medium">0</span></p>
-                <p class="text-sm text-gray-600">Complete Task :0</p>
-            </div>
-            <div class="text-purple-500 text-3xl p-3">
-                <i class="fa-solid fa-tasks"></i>
-            </div>
-        </div>
+        <p class="text-sm text-gray-600 hover:text-green-500 cursor-pointer transition-colors duration-300">
+          Total Revenue : <span class="font-medium">0</span>
+        </p>
+        <p class="text-sm text-gray-600 hover:text-green-500 cursor-pointer transition-colors duration-300">
+          Total Purchase : 0
+        </p>
+      </div>
 
-    <!-- Total Purchase -->
-      <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
-            <div>
-                <h3 class="font-semibold text-gray-700 mb-1.5">Financial Summary</h3>
-                <p class="text-sm text-gray-600">Total Revenue : <span class="font-medium">0</span></p>
-                <p class="text-sm text-gray-600">Total Purchase :0</p>
-            </div>
-             <div class="text-green-500 text-3xl p-3">
-             <i class="fas fa-money-bill-trend-up"></i>
-            </div>
-        </div>
+      <div class="text-green-500 text-3xl p-3">
+        <i class="fas fa-money-bill-trend-up"></i>
+      </div>
 
-     <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
-            <div>
-                <h3 class="font-semibold text-gray-700 mb-1.5">Reports</h3>
-                <p class="text-sm text-gray-600">Payments Report : <span class="font-medium">0</span></p>
-                <p class="text-sm text-gray-600">Attendance Report :0</p>                       
-            </div>
-             <div class="text-teal-500 text-3xl p-3">
-             <i class="fa-solid fa-user-check"></i>
-            </div>
-        </div>
+      <span class="absolute bottom-0 left-0 h-1 bg-green-500 w-0 group-hover:w-full transition-all duration-500"></span>
+    </div>
 
-         <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
-            <div>
-                <h3 class="font-semibold text-gray-700 mb-1.5">Reports</h3>
-                <p class="text-sm text-gray-600">Mid Year Report : <span class="font-medium">0</span></p>
-                <p class="text-sm text-gray-600">One-On-One Report:0</p>
-            </div>
-            <div class="text-indigo-500 text-3xl p-3">
-              <i class="fa-solid fa-diagram-project"></i>
-            </div>
-        </div>
 
-         <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start">
-            <div>
-                <h3 class="font-semibold text-gray-700 mb-1.5">Pin Login</h3>
-                <p class="text-sm text-gray-600">Pin Login Report : <span class="font-medium">0</span></p>
-            </div>
-            <div class="text-blue-500 text-3xl p-3">
-              <i class="fa-solid fa-diagram-project"></i>
-            </div>
-        </div>
+    <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start
+            relative group overflow-hidden
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-xl">
 
-   
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-1.5">Reports</h3>
+
+        <p class="text-sm text-gray-600 hover:text-teal-500 cursor-pointer transition-colors duration-300">
+          Payments Report : <span class="font-medium">0</span>
+        </p>
+        <p class="text-sm text-gray-600 hover:text-teal-500 cursor-pointer transition-colors duration-300">
+          Attendance Report : 0
+        </p>
+      </div>
+
+      <div class="text-teal-500 text-3xl p-3">
+        <i class="fa-solid fa-user-check"></i>
+      </div>
+
+      <span class="absolute bottom-0 left-0 h-1 bg-teal-500 w-0 
+               group-hover:w-full transition-all duration-500"></span>
+    </div>
+
+
+    <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start
+            relative group overflow-hidden
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-xl">
+
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-1.5">Reports</h3>
+
+        <!-- Clickable text only -->
+        <p class="text-sm text-gray-600 hover:text-indigo-500 cursor-pointer transition-colors duration-300">
+          Mid Year Report : <span class="font-medium">0</span>
+        </p>
+        <p class="text-sm text-gray-600 hover:text-indigo-500 cursor-pointer transition-colors duration-300">
+          One-On-One Report : 0
+        </p>
+      </div>
+
+      <div class="text-indigo-500 text-3xl p-3">
+        <i class="fa-solid fa-user-gear"></i>
+      </div>
+
+      <!-- Bottom underline -->
+      <span class="absolute bottom-0 left-0 h-1 bg-indigo-500 w-0 
+               group-hover:w-full transition-all duration-500"></span>
+    </div>
+
+
+    <div class="bg-white rounded-lg shadow-md p-3 flex justify-between items-start
+            relative group overflow-hidden
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-xl">
+
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-1.5">Pin Login</h3>
+
+        <p class="text-sm text-gray-600 hover:text-red-500 cursor-pointer transition-colors duration-300">
+          Pin Login Report : <span class="font-medium">0</span>
+        </p>
+      </div>
+
+      <div class="text-red-500 text-3xl p-3">
+        <i class="fas fa-basket-shopping"></i>
+      </div>
+
+      <span class="absolute bottom-0 left-0 h-1 bg-red-500 w-0 
+               group-hover:w-full transition-all duration-500"></span>
+    </div>
+
+
+
 
   </div>
 
@@ -108,7 +210,7 @@
     <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-5">
       <!-- Project Status Chart -->
       <div class="bg-white rounded-2xl p-5 hover:shadow-xl transition-all duration-300"
-           style="box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 20px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;">
+        style="box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 20px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;">
         <h5 class="font-semibold text-gray-700 mb-4 text-lg">Project Status Overview</h5>
         <div class="h-48">
           <canvas id="projectStatusChart" class="w-full h-full"></canvas>
@@ -116,7 +218,7 @@
       </div>
       <!-- Task Status Chart -->
       <div class="bg-white rounded-2xl p-5 hover:shadow-xl transition-all duration-300"
-           style="box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 20px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;">
+        style="box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 20px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;">
         <h5 class="font-semibold text-gray-700 mb-4 text-lg">Task Status Overview</h5>
         <div class="h-48">
           <canvas id="taskStatusChart" class="w-full h-full"></canvas>
@@ -126,25 +228,34 @@
 
     <!-- Right Quick Actions -->
     <div class="lg:col-span-4 space-y-4">
-      <div class="bg-white rounded-2xl p-5 h-full flex flex-col justify-start hover:shadow-xl transition-all duration-300"
-           style="box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 20px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;">
+      <div
+        class="bg-white rounded-2xl p-5 h-full flex flex-col justify-start hover:shadow-xl transition-all duration-300"
+        style="box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 20px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;">
         <h5 class="font-semibold text-gray-700 mb-4 text-lg">Quick Actions</h5>
         <div class="space-y-3">
-          <a href="/Employee/AddEmployee" class="block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white text-center py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:translate-y-[-2px]">
+          <a href="/Employee/AddEmployee"
+            class="block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white text-center py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:translate-y-[-2px]">
             Add New Employee
           </a>
-          <a href="/admin/AddProject" class="block bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-center py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:translate-y-[-2px]">
+          <a href="/admin/AddProject"
+            class="block bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white text-center py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:translate-y-[-2px]">
             Create Project
           </a>
 
           <!-- Dropdown Task Report -->
           <div class="relative">
-            <button class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:translate-y-[-2px]" id="taskReportDropdown">
+            <button
+              class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:translate-y-[-2px]"
+              id="taskReportDropdown">
               Task Report
             </button>
-            <ul class="absolute left-0 mt-2 w-full bg-white border rounded-xl shadow-xl hidden z-10 overflow-hidden" id="taskReportMenu">
-              <li><a href="/admin/Task_reports?status=Pending" class="block px-4 py-3 hover:bg-gray-50 transition-colors duration-200 border-b">Pending Tasks (0)</a></li>
-              <li><a href="/admin/Task_reports?status=Completed" class="block px-4 py-3 hover:bg-gray-50 transition-colors duration-200">Completed Tasks (0)</a></li>
+            <ul class="absolute left-0 mt-2 w-full bg-white border rounded-xl shadow-xl hidden z-10 overflow-hidden"
+              id="taskReportMenu">
+              <li><a href="/admin/Task_reports?status=Pending"
+                  class="block px-4 py-3 hover:bg-gray-50 transition-colors duration-200 border-b">Pending Tasks (0)</a>
+              </li>
+              <li><a href="/admin/Task_reports?status=Completed"
+                  class="block px-4 py-3 hover:bg-gray-50 transition-colors duration-200">Completed Tasks (0)</a></li>
             </ul>
           </div>
         </div>

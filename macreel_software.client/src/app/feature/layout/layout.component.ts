@@ -1,21 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
   standalone: false,
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
+  styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit {
+
   sidebarOpen = true;
-  profileOpen = false;
+  isMobile = false;
+  openMenu: string | null = null;
+
+  ngOnInit(): void {
+    this.checkScreen();
+    window.addEventListener('resize', () => this.checkScreen());
+  }
+
+  checkScreen() {
+    this.isMobile = window.innerWidth < 768;
+    if (this.isMobile) {
+      this.sidebarOpen = false;
+    }
+  }
 
   toggleSidebar() {
     this.sidebarOpen = !this.sidebarOpen;
   }
-   openMenu: string | null = null;
 
   toggleMenu(menu: string) {
     this.openMenu = this.openMenu === menu ? null : menu;
+  }
+
+  closeSidebarOnMobile() {
+    if (this.isMobile) {
+      this.sidebarOpen = false;
+    }
   }
 }

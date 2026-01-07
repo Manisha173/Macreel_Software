@@ -1,27 +1,27 @@
-/* table {
-  border-collapse: collapse;
+/* Hide "Items per page" label */
+::ng-deep .mat-mdc-paginator-page-size-label {
+  display: none !important;
 }
 
-th, td {
-  border-right: 1px solid #e5e7eb;
+/* Hide "x – y of z" range text */
+::ng-deep .mat-mdc-paginator-range-label {
+  display: none !important;
 }
 
-th:last-child,
-td:last-child {
-  border-right: none;
-} */
-
-
-/* .table_area {
-  padding: 18px;
+/* Reduce dropdown (5,10,20) size */
+::ng-deep .mat-mdc-paginator-page-size-select {
+  width: 50px !important;
+  min-width: 55px !important;
 }
-table{
-  background-color: rgb(255, 255, 255);
-}
-table th{
-  background-color: #E6354B;
-}
-.serialNumCol{
-  width: 80px;
-} */
 
+/* Reduce dropdown height */
+::ng-deep .mat-mdc-select-trigger {
+  height: 22px !important;
+  font-size: 13px !important;
+}
+
+/* Reduce paginator height */
+::ng-deep .mat-mdc-paginator-container {
+  min-height: 40px !important;
+  padding: 0 8px !important;
+}
