@@ -52,9 +52,10 @@ namespace Macreel_Software.DAL.Master
             }
         }
 
-        public async Task<List<role>> getAllRole(string? searchTerm)
+        public async Task<(List<role> Data, int TotalRecords)> getAllRole( string? searchTerm,int? pageNumber,int? pageSize)
         {
-            List<role> list = new List<role>();
+            List<role> list = new();
+            int totalRecords = 0;
 
             try
             {
@@ -62,22 +63,34 @@ namespace Macreel_Software.DAL.Master
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@action", "getAllRole");
-                    cmd.Parameters.AddWithValue("@searchTerm", string.IsNullOrEmpty(searchTerm) ? DBNull.Value : searchTerm);
+                    cmd.Parameters.AddWithValue("@searchTerm",
+                        string.IsNullOrWhiteSpace(searchTerm) ? DBNull.Value : searchTerm);
+
+                    cmd.Parameters.AddWithValue("@pageNumber",
+                        pageNumber.HasValue ? pageNumber.Value : DBNull.Value);
+
+                    cmd.Parameters.AddWithValue("@pageSize",
+                        pageSize.HasValue ? pageSize.Value : DBNull.Value);
 
                     if (_conn.State != ConnectionState.Open)
                         await _conn.OpenAsync();
 
                     using (SqlDataReader sdr = await cmd.ExecuteReaderAsync())
                     {
+                  
                         while (await sdr.ReadAsync())
                         {
                             list.Add(new role
                             {
                                 id = Convert.ToInt32(sdr["id"]),
-                                rolename = sdr["roleName"] != DBNull.Value
-                                            ? sdr["roleName"].ToString()
-                                            : ""
+                                rolename = sdr["roleName"].ToString()
                             });
+                        }
+
+                        // Result set 2 → TotalRecords
+                        if (await sdr.NextResultAsync() && await sdr.ReadAsync())
+                        {
+                            totalRecords = Convert.ToInt32(sdr["TotalRecords"]);
                         }
                     }
                 }
@@ -88,7 +101,7 @@ namespace Macreel_Software.DAL.Master
                     await _conn.CloseAsync();
             }
 
-            return list;
+            return (list, totalRecords);
         }
 
 
@@ -196,42 +209,57 @@ namespace Macreel_Software.DAL.Master
         }
 
 
-        public async Task<List<department>> getAllDepartment(string? searchTerm = null)
+        public async Task<(List<department> Data, int TotalRecords)> getAllDepartment(string? searchTerm,int? pageNumber,int? pageSize)
         {
-            List<department> list = new List<department>();
+            List<department> list = new();
+            int totalRecords = 0;
+
             try
             {
                 using (SqlCommand cmd = new SqlCommand("sp_department", _conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@action", "getAllDepartment");
-                    cmd.Parameters.AddWithValue("@searchTerm", string.IsNullOrEmpty(searchTerm) ? DBNull.Value : searchTerm);
+
+                    cmd.Parameters.AddWithValue("@searchTerm",
+                        string.IsNullOrWhiteSpace(searchTerm) ? DBNull.Value : searchTerm);
+
+                    cmd.Parameters.AddWithValue("@pageNumber",
+                        pageNumber.HasValue ? pageNumber.Value : DBNull.Value);
+
+                    cmd.Parameters.AddWithValue("@pageSize",
+                        pageSize.HasValue ? pageSize.Value : DBNull.Value);
+
                     if (_conn.State != ConnectionState.Open)
                         await _conn.OpenAsync();
 
                     using (SqlDataReader sdr = await cmd.ExecuteReaderAsync())
                     {
+                        
                         while (await sdr.ReadAsync())
                         {
                             list.Add(new department
                             {
                                 id = Convert.ToInt32(sdr["id"]),
-                                departmentName = sdr["departmentName"] != DBNull.Value ? sdr["departmentName"].ToString() : ""
+                                departmentName = sdr["departmentName"]?.ToString()
                             });
+                        }
+
+                       
+                        if (await sdr.NextResultAsync() && await sdr.ReadAsync())
+                        {
+                            totalRecords = Convert.ToInt32(sdr["TotalRecords"]);
                         }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                throw;
             }
             finally
             {
                 if (_conn.State == ConnectionState.Open)
                     await _conn.CloseAsync();
             }
-            return list;
+
+            return (list, totalRecords);
         }
 
         public async Task<List<department>> getAllDepartmentById(int id)
@@ -335,43 +363,59 @@ namespace Macreel_Software.DAL.Master
         }
 
 
-        public async Task<List<designation>> getAllDesignation(string? searchTerm = null)
+        public async Task<(List<designation> Data, int TotalRecords)> getAllDesignation(string? searchTerm,int? pageNumber,int? pageSize)
         {
-            List<designation> list = new List<designation>();
+            List<designation> list = new();
+            int totalRecords = 0;
+
             try
             {
                 using (SqlCommand cmd = new SqlCommand("sp_designation", _conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@action", "getAllDesignation");
-                    cmd.Parameters.AddWithValue("@searchTerm", string.IsNullOrEmpty(searchTerm) ? DBNull.Value : searchTerm);
+
+                    cmd.Parameters.AddWithValue("@searchTerm",
+                        string.IsNullOrWhiteSpace(searchTerm) ? DBNull.Value : searchTerm);
+
+                    cmd.Parameters.AddWithValue("@pageNumber",
+                        pageNumber.HasValue ? pageNumber.Value : DBNull.Value);
+
+                    cmd.Parameters.AddWithValue("@pageSize",
+                        pageSize.HasValue ? pageSize.Value : DBNull.Value);
+
                     if (_conn.State != ConnectionState.Open)
                         await _conn.OpenAsync();
 
                     using (SqlDataReader sdr = await cmd.ExecuteReaderAsync())
                     {
+                      
                         while (await sdr.ReadAsync())
                         {
                             list.Add(new designation
                             {
                                 id = Convert.ToInt32(sdr["id"]),
-                                designationName = sdr["designationName"] != DBNull.Value ? sdr["designationName"].ToString() : ""
+                                designationName = sdr["designationName"]?.ToString()
                             });
+                        }
+
+                    
+                        if (await sdr.NextResultAsync() && await sdr.ReadAsync())
+                        {
+                            totalRecords = Convert.ToInt32(sdr["TotalRecords"]);
                         }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                throw;
             }
             finally
             {
                 if (_conn.State == ConnectionState.Open)
                     await _conn.CloseAsync();
             }
-            return list;
+
+            return (list, totalRecords);
         }
+
 
         public async Task<List<designation>> getAllDesignationById(int id)
         {
