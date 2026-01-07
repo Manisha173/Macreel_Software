@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "Macreel_Software.Models\\ApiResponse.cs",
               "ToolTip": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Models\\ApiResponse.cs",
               "RelativeToolTip": "Macreel_Software.Models\\ApiResponse.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAADwvzAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAADwvywAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T12:25:48.636Z",
               "EditorCaption": ""
@@ -91,8 +91,7 @@
               "RelativeToolTip": "Macreel_Software.Models\\Master\\MasterData.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAADwvxcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T09:19:35.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T09:19:35.059Z"
             },
             {
               "$type": "Document",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "Macreel_Software.Server\\Controllers\\MasterController.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAswEQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T08:47:37.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T08:47:37.62Z"
             },
             {
               "$type": "Document",
@@ -117,8 +115,7 @@
               "RelativeToolTip": "Macreel_Software.DAL\\Master\\IMasterService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAApwAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T08:01:32.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T08:01:32.732Z"
             },
             {
               "$type": "Document",
@@ -130,8 +127,7 @@
               "RelativeToolTip": "Macreel_Software.DAL\\Master\\MasterService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T08:01:09.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T08:01:09.367Z"
             },
             {
               "$type": "Document",
@@ -143,8 +139,7 @@
               "RelativeToolTip": "Macreel_Software.Server\\Program.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T09:00:05.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T09:00:05.445Z"
             }
           ]
         }
