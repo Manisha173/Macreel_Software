@@ -1,40 +1,3 @@
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Black.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-BlackItalic.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Bold.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-BoldItalic.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-ExtraBold.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-ExtraBoldItalic.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-ExtraLight.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-ExtraLightItalic.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Italic.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Light.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-LightItalic.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Medium.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-MediumItalic.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Regular.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-SemiBold.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-SemiBoldItalic.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Thin.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-ThinItalic.ttf
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\OFL.txt
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.DAL.deps.json
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.DAL.dll
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.DAL.pdb
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.Models.dll
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.Services.dll
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.Models.pdb
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.Services.pdb
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.csproj.AssemblyReference.cache
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.GeneratedMSBuildEditorConfig.editorconfig
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.AssemblyInfoInputs.cache
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.AssemblyInfo.cs
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.csproj.CoreCompileInputs.cache
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.sourcelink.json
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_.F7CCE093.Up2Date
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.dll
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\refint\Macreel_Software.DAL.dll
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.pdb
-D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\ref\Macreel_Software.DAL.dll
 D:\Manisha\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Black.ttf
 D:\Manisha\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-BlackItalic.ttf
 D:\Manisha\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Bold.ttf
@@ -109,3 +72,40 @@ D:\Macreel-Software\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macre
 D:\Macreel-Software\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\refint\Macreel_Software.DAL.dll
 D:\Macreel-Software\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.pdb
 D:\Macreel-Software\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\ref\Macreel_Software.DAL.dll
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Black.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-BlackItalic.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Bold.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-BoldItalic.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-ExtraBold.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-ExtraBoldItalic.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-ExtraLight.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-ExtraLightItalic.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Italic.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Light.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-LightItalic.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Medium.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-MediumItalic.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Regular.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-SemiBold.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-SemiBoldItalic.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-Thin.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\Lato-ThinItalic.ttf
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\LatoFont\OFL.txt
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.DAL.deps.json
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.DAL.dll
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.DAL.pdb
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.Models.dll
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.Services.dll
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.Models.pdb
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\bin\Debug\net8.0\Macreel_Software.Services.pdb
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.csproj.AssemblyReference.cache
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.AssemblyInfoInputs.cache
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.AssemblyInfo.cs
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.csproj.CoreCompileInputs.cache
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.sourcelink.json
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_.F7CCE093.Up2Date
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.dll
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\refint\Macreel_Software.DAL.dll
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\Macreel_Software.DAL.pdb
+D:\deep work\.netProject\Macreel_Software\Macreel_Software.DAL\obj\Debug\net8.0\ref\Macreel_Software.DAL.dll

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Macreel-Software\\Macreel_Software\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E9736C7C-8EBE-60D3-92AA-C82284442EE0}|Macreel_Software.DAL\\Macreel_Software.DAL.csproj|d:\\macreel-software\\macreel_software\\macreel_software.dal\\master\\imasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9736C7C-8EBE-60D3-92AA-C82284442EE0}|Macreel_Software.DAL\\Macreel_Software.DAL.csproj|solutionrelative:macreel_software.dal\\master\\imasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F4302B2B-877E-EBB6-A173-C32263D0A774}|Macreel_Software.Server\\Macreel_Software.Server.csproj|d:\\macreel-software\\macreel_software\\macreel_software.server\\controllers\\mastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F4302B2B-877E-EBB6-A173-C32263D0A774}|Macreel_Software.Server\\Macreel_Software.Server.csproj|solutionrelative:macreel_software.server\\controllers\\mastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9736C7C-8EBE-60D3-92AA-C82284442EE0}|Macreel_Software.DAL\\Macreel_Software.DAL.csproj|d:\\macreel-software\\macreel_software\\macreel_software.dal\\master\\imasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9736C7C-8EBE-60D3-92AA-C82284442EE0}|Macreel_Software.DAL\\Macreel_Software.DAL.csproj|solutionrelative:macreel_software.dal\\master\\imasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9736C7C-8EBE-60D3-92AA-C82284442EE0}|Macreel_Software.DAL\\Macreel_Software.DAL.csproj|d:\\macreel-software\\macreel_software\\macreel_software.dal\\master\\masterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "IMasterService.cs",
               "DocumentMoniker": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.DAL\\Master\\IMasterService.cs",
               "RelativeDocumentMoniker": "Macreel_Software.DAL\\Master\\IMasterService.cs",
@@ -125,13 +125,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MasterController.cs",
               "DocumentMoniker": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Server\\Controllers\\MasterController.cs",
               "RelativeDocumentMoniker": "Macreel_Software.Server\\Controllers\\MasterController.cs",
               "ToolTip": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Server\\Controllers\\MasterController.cs",
               "RelativeToolTip": "Macreel_Software.Server\\Controllers\\MasterController.cs",
-              "ViewState": "AgIAAEUBAAAAAAAAAAA5wJoBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIoBAAAAAAAAAIAwwJkBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-07T11:54:06.793Z",
               "EditorCaption": ""

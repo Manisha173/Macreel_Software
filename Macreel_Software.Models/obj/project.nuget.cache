@@ -9,5 +9,15 @@
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Models\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\Macreel-Software\\Macreel_Software\\Macreel_Software.Models\\Macreel_Software.Models.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
