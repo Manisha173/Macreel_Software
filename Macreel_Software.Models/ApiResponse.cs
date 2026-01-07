@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Macreel_Software.Models
 {
-    internal class ApiResponse<T>
+    public class ApiResponse<T>
     {
         public bool Success { get; set; }
         public int StatusCode { get; set; }
