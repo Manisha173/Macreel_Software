@@ -47,7 +47,7 @@ namespace Macreel_Software.DAL.Employee
 
         }
 
-        public async Task<ApiResponse<List<assignedLeave>>> AssignedLeaveListByEmpId(int empId, string? searchTerm,
+        public async Task<ApiResponse<List<assignedLeave>>> AssignedLeaveListByEmpId(int? empId, string? searchTerm,
         int? pageNumber, int? pageSize)
         {
             List<assignedLeave> list = new();

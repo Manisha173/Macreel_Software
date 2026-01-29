@@ -12,7 +12,7 @@ namespace Macreel_Software.DAL.Employee
     public interface IEmployeeService
     {
         Task<bool> insertResponseByEmpId(EmployeeData data);
-        Task<ApiResponse<List<assignedLeave>>> AssignedLeaveListByEmpId( int empId, string? searchTerm, int? pageNumber,int? pageSize);
+        Task<ApiResponse<List<assignedLeave>>> AssignedLeaveListByEmpId( int? empId, string? searchTerm, int? pageNumber,int? pageSize);
         Task<bool> insertApplyLeaveByEmpId(applyLeave data);
         Task<ApiResponse<List<applyLeave>>> applyLeaveListByEmpId(int empId, string? searchTerm,int? pageNumber, int? pageSize);
         Task<ApiResponse<List<applyLeave>>> getAllApplyLeaveById(int id, int empId);
