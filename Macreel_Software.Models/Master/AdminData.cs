@@ -86,6 +86,7 @@ namespace Macreel_Software.Models.Master
         public string? TwelthCertificatePath { get; set; }
         public string? GraduationCertificatePath { get; set; }
         public string? MastersCertificatePath { get; set; }
+        public string? ReportingManagerName { get; set; }
 
 
      
