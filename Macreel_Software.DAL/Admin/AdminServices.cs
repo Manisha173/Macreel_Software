@@ -321,7 +321,7 @@ namespace Macreel_Software.DAL.Admin
         {
             List<employeeRegistration> list = new List<employeeRegistration>();
             int totalRecords = 0;
-
+           string encryptedPassword = null;
             try
             {
                 using (SqlCommand cmd = new SqlCommand("sp_employee", _conn))
@@ -339,8 +339,15 @@ namespace Macreel_Software.DAL.Admin
                     {
                         while (await sdr.ReadAsync())
                         {
-                            if (totalRecords == 0 && sdr["TotalRecords"] != DBNull.Value)
-                                totalRecords = Convert.ToInt32(sdr["TotalRecords"]);
+                            encryptedPassword = sdr["password"] != DBNull.Value? sdr["password"].ToString(): null;
+
+                            string decryptedPassword = null;
+
+                            if (!string.IsNullOrEmpty(encryptedPassword))
+                            {
+                                decryptedPassword =  _pass.DecryptPassword(encryptedPassword);
+                            }
+                            if (totalRecords == 0 && sdr["TotalRecords"] != DBNull.Value)totalRecords = Convert.ToInt32(sdr["TotalRecords"]);
 
                             list.Add(new employeeRegistration
                             {
@@ -392,8 +399,10 @@ namespace Macreel_Software.DAL.Admin
                                 cityName = sdr["cityName"] != DBNull.Value ? sdr["cityName"].ToString() : null,
                                 skill = sdr["skillsJson"] != DBNull.Value
                 ? JsonSerializer.Deserialize<List<Skill>>(sdr["skillsJson"].ToString())
-                : new List<Skill>()
+                : new List<Skill>(),
+                                Password = decryptedPassword
                             });
+                         
                         }
                     }
                 }
