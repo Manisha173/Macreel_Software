@@ -71,16 +71,12 @@
     </div>
 
 
-  
 
-</div>
- 
-   <app-generic-table
-  [columns]="Roles"
-  [data]=" data"
-  (edit)="editDesignation($event)"
-  (delete)="deleteDesignation($event)"
- >
-</app-generic-table>
 
   </div>
+
+  <app-generic-table [columns]="Roles" [data]=" data" (edit)="editDesignation($event)"
+    (delete)="deleteDesignation($event)">
+  </app-generic-table>
+
+</div>

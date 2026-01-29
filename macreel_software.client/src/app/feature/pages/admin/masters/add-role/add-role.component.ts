@@ -73,28 +73,67 @@ export class AddRoleComponent implements OnInit {
     this.loadRoles();
   }
 
-  onSubmit() {
-    if (!this.roleName.trim()) return;
+  // onSubmit() {
+  //   if (!this.roleName.trim()) return;
 
-    const payload = { id: this.editingRoleId || 0, rolename: this.roleName };
-    this.master.AddRole(payload).subscribe({
-      next: () => {
-        Swal.fire({
-          icon: 'success',
-          title: this.editingRoleId ? 'Role updated successfully' : 'Role added successfully',
-          showConfirmButton: false,
-          timer: 1500
-        });
-        this.roleName = '';
-        this.editingRoleId = null;
-        this.loadRoles();
-      },
-      error: (err) => {
-        console.error(err);
-        Swal.fire({ icon: 'error', title: 'Error!', text: 'Failed to add/update role' });
-      }
-    });
-  }
+  //   const payload = { id: this.editingRoleId || 0, rolename: this.roleName };
+  //   this.master.AddRole(payload).subscribe({
+  //     next: () => {
+  //       Swal.fire({
+  //         icon: 'success',
+  //         title: this.editingRoleId ? 'Role updated successfully' : 'Role added successfully',
+  //         showConfirmButton: false,
+  //         timer: 1500
+  //       });
+  //       this.roleName = '';
+  //       this.editingRoleId = null;
+  //       this.loadRoles();
+  //     },
+  //     error: (err) => {
+  //       console.error(err);
+  //       Swal.fire({ icon: 'error', title: 'Error!', text: 'Failed to add/update role' });
+  //     }
+  //   });
+  // }
+
+  onSubmit() {
+  if (!this.roleName.trim()) return;
+
+  const payload = { id: this.editingRoleId || 0, rolename: this.roleName };
+
+  this.master.AddRole(payload).subscribe({
+    next: () => {
+      Swal.fire({
+        icon: 'success',
+        title: this.editingRoleId
+          ? 'Role updated successfully'
+          : 'Role added successfully',
+        showConfirmButton: false,
+        timer: 1500
+      });
+
+      this.roleName = '';
+      this.editingRoleId = null;
+      this.loadRoles();
+    },
+
+    error: (err) => {
+      console.error('API Error 👉', err);
+
+      const errorMessage =
+        err?.error?.message ||
+        err?.error?.errorMessage ||
+        'Something went wrong';
+
+      Swal.fire({
+        icon: 'error',
+        title: 'Error!',
+        text: errorMessage
+      });
+    }
+  });
+}
+
 
   editRole(role: PeriodicElement) {
     this.master.getRoleById(role.id).subscribe({

@@ -28,10 +28,10 @@ export class AddDesignationComponent implements OnInit {
 
   constructor(private master: ManageMasterdataService) { }
 
-   Roles: TableColumn<PeriodicElement>[] = [
-        { key: 'name', label: 'Name' },
-       
-      ];
+  Roles: TableColumn<PeriodicElement>[] = [
+    { key: 'name', label: 'Name' },
+
+  ];
 
   ngOnInit(): void {
     this.loadDesignations();
@@ -60,36 +60,51 @@ export class AddDesignationComponent implements OnInit {
       });
   }
 
-// ================= ADD / UPDATE =================
-onSubmit() {
-  if (!this.designationName.trim()) return;
+  // ================= ADD / UPDATE =================
+  onSubmit() {
+    if (!this.designationName.trim()) return;
 
-  // ✅ Send payload exactly as API expects
-  const payload = {
-    id: this.editingDesignationId ?? 0,  // 0 for new designation
-    designationName: this.designationName
-  };
+    // ✅ Send payload exactly as API expects
+    const payload = {
+      id: this.editingDesignationId ?? 0,  // 0 for new designation
+      designationName: this.designationName
+    };
 
-  this.master.addOrUpdateDesignation(payload).subscribe({
-    next: () => {
-      Swal.fire({
-        icon: 'success',
-        title: this.editingDesignationId
-          ? 'Designation Updated'
-          : 'Designation Added',
-        timer: 1500,
-        showConfirmButton: false
-      });
+    this.master.addOrUpdateDesignation(payload).subscribe({
+      next: () => {
+        Swal.fire({
+          icon: 'success',
+          title: this.editingDesignationId
+            ? 'Designation Updated'
+            : 'Designation Added',
+          timer: 1500,
+          showConfirmButton: false
+        });
 
-      this.cancelEdit();
-      this.loadDesignations();
-    },
-    error: (err) => {
-      console.error(err);
-      Swal.fire('Error', 'Save failed', 'error');
-    }
-  });
-}
+        this.cancelEdit();
+        this.loadDesignations();
+      },
+      // error: (err) => {
+      //   console.error(err);
+      //   Swal.fire('Error', 'Save failed', 'error');
+      // }
+      error: (err) => {
+        console.error('API Error 👉', err);
+
+        const errorMessage =
+          err?.error?.message ||
+          err?.error?.errorMessage ||
+          'Something went wrong';
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Error!',
+          text: errorMessage
+        });
+      }
+
+    });
+  }
 
 
   // ================= EDIT =================
