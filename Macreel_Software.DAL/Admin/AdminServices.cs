@@ -252,9 +252,9 @@ namespace Macreel_Software.DAL.Admin
                                 stateName = sdr["stateName"] != DBNull.Value ? sdr["stateName"].ToString() : null,
                                 cityName = sdr["cityName"] != DBNull.Value ? sdr["cityName"].ToString() : null,
                                 skill = sdr["skillsJson"] != DBNull.Value
-                ? JsonSerializer.Deserialize<List<Skill>>(sdr["skillsJson"].ToString()!)
-                : new List<Skill>()
-
+                                ? JsonSerializer.Deserialize<List<Skill>>(sdr["skillsJson"].ToString()!)
+                                : new List<Skill>(),
+                                ReportingManagerName = sdr["ReportingManager"] != DBNull.Value ? sdr["ReportingManager"].ToString():null,
                             });
                         }
                     }
@@ -321,7 +321,7 @@ namespace Macreel_Software.DAL.Admin
         {
             List<employeeRegistration> list = new List<employeeRegistration>();
             int totalRecords = 0;
-
+           string encryptedPassword = null;
             try
             {
                 using (SqlCommand cmd = new SqlCommand("sp_employee", _conn))
@@ -339,8 +339,15 @@ namespace Macreel_Software.DAL.Admin
                     {
                         while (await sdr.ReadAsync())
                         {
-                            if (totalRecords == 0 && sdr["TotalRecords"] != DBNull.Value)
-                                totalRecords = Convert.ToInt32(sdr["TotalRecords"]);
+                            encryptedPassword = sdr["password"] != DBNull.Value? sdr["password"].ToString(): null;
+
+                            string decryptedPassword = null;
+
+                            if (!string.IsNullOrEmpty(encryptedPassword))
+                            {
+                                decryptedPassword =  _pass.DecryptPassword(encryptedPassword);
+                            }
+                            if (totalRecords == 0 && sdr["TotalRecords"] != DBNull.Value)totalRecords = Convert.ToInt32(sdr["TotalRecords"]);
 
                             list.Add(new employeeRegistration
                             {
@@ -392,8 +399,10 @@ namespace Macreel_Software.DAL.Admin
                                 cityName = sdr["cityName"] != DBNull.Value ? sdr["cityName"].ToString() : null,
                                 skill = sdr["skillsJson"] != DBNull.Value
                 ? JsonSerializer.Deserialize<List<Skill>>(sdr["skillsJson"].ToString())
-                : new List<Skill>()
+                : new List<Skill>(),
+                                Password = decryptedPassword
                             });
+                         
                         }
                     }
                 }
@@ -1342,7 +1351,7 @@ namespace Macreel_Software.DAL.Admin
             }
         }
 
-        public async Task<ApiResponse<List<project>>> GetAllProject(string? SearchTerm,int? pageNumber,int?pageSize,int? userId = null)
+        public async Task<ApiResponse<List<project>>> GetAllProject(string? SearchTerm,int? pageNumber,int?pageSize, int? userId = null,string? status=null)
         {
             List<project> list = new List<project>();
             int totalRecords = 0;
@@ -1355,6 +1364,7 @@ namespace Macreel_Software.DAL.Admin
                 cmd.Parameters.AddWithValue("@pageNumber",pageNumber.HasValue?pageNumber.Value:DBNull.Value);
                 cmd.Parameters.AddWithValue("@pageSize",pageSize.HasValue?pageSize.Value:DBNull.Value);
                 cmd.Parameters.AddWithValue("@id",userId.HasValue?userId.Value:DBNull.Value);
+                cmd.Parameters.AddWithValue("@status", string.IsNullOrWhiteSpace(status)?(object)DBNull.Value:status);
                 if (_conn.State == ConnectionState.Closed)
                     await _conn.OpenAsync();
 

@@ -117,9 +117,13 @@ namespace Macreel_Software.Server.Controllers
                     }
                 }
 
+                string pass = model.Password;
+
                 // ---------- STEP 2: DB INSERT ----------
                 model.Password = _pass.EncryptPassword(model.Password!);
                 string dbMessage = await _services.InsertEmployeeRegistrationData(model);
+
+
 
                 if (dbMessage.Contains("Email already exists"))
                 {
@@ -131,6 +135,23 @@ namespace Macreel_Software.Server.Controllers
                     });
                 }
 
+                try
+                {
+                    MailRequest mailRequest = new MailRequest
+                    {
+                        ToEmail = model.EmailId,
+                        Subject = "Your Login Credentials - Macreel Infosoft",
+                        BodyType = MailBodyType.UserCredential,
+                        UserName = model.EmailId,
+                        Password = pass
+                    };
+
+                    await _mailservice.SendMailAsync(mailRequest);
+                }
+                catch(Exception ex)
+                {
+                    throw;
+                }
                 if (!dbMessage.ToLower().Contains("success"))
                 {
                     return BadRequest(new
@@ -789,6 +810,27 @@ namespace Macreel_Software.Server.Controllers
             });
         }
 
+
+        //[HttpGet("getAllProject")]
+        //public async Task<IActionResult> getAllProject(string? searchTerm = null, int? pageNumber = null, int? pageSize = null, string? status = null)
+        //{
+        //    try
+        //    {
+        //        ApiResponse<List<project>> result =
+        //            await _services.GetAllProject(searchTerm, pageNumber, pageSize,status);
+
+
+        //        return StatusCode(result.StatusCode, result);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, ApiResponse<List<project>>.FailureResponse(
+        //            "An error occurred while fetching project details",
+        //            500,
+        //            "SERVER_ERROR"
+        //        ));
+        //    }
+        //}
 
         [HttpGet("getProjectDetailsByEmpId")]
         public async Task<IActionResult> getProjectDetailsById(int empId)

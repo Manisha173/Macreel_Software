@@ -17,3 +17,49 @@
 </app-generic-table>
 
 </div>
+
+<ng-template #filesTemplate let-row>
+  <button
+    *ngIf="row.uploadedDocuments?.length"
+    class="w-7 h-7 flex items-center justify-center rounded
+           text-gray-600 hover:text-blue-600  hover:bg-gray-100"
+    title="View Documents"
+    (click)="openFiles(row.uploadedDocuments)">
+
+    <!-- Eye icon -->
+    <svg class="w-4 h-4 ms-3" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+      <path d="M2.458 12C3.732 7.943 7.523 5 12 5
+               c4.478 0 8.268 2.943 9.542 7
+               -1.274 4.057-5.064 7-9.542 7
+               -4.477 0-8.268-2.943-9.542-7z"/>
+    </svg>
+  </button>
+</ng-template>
+<div *ngIf="showFilesModal"
+     class="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+
+  <div class="bg-white w-[80%] h-[80%] rounded-xl shadow-xl flex flex-col">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center px-4 py-2 border-b">
+      <h3 class="font-semibold">Documents</h3>
+      <button (click)="closeFiles()" class="text-gray-500 hover:text-red-500">✕</button>
+    </div>
+
+    <!-- Body -->
+    <div class="flex-1 overflow-auto p-4 space-y-4">
+      <ng-container *ngFor="let doc of selectedDocuments">
+        <iframe [src]="doc | safeUrl"
+                class="w-full h-[400px] border rounded">
+        </iframe>
+      </ng-container>
+
+      <p *ngIf="!selectedDocuments.length" class="text-center text-gray-400">
+        No documents available
+      </p>
+    </div>
+
+  </div>
+</div>

@@ -91,4 +91,20 @@ export class TaskListComponent {
   onScroll(event: Event): void {
     this.paginator.handleScroll(event, this.searchForm.value.search);
   }
+
+  openFiles(docs: string[] = []) {
+  if (!docs.length) return;
+
+  this.selectedDocuments = docs.map(doc => {
+    return `${this.pdfUrl}${doc}`;
+  });
+
+  this.showFilesModal = true;
+}
+  
+
+  closeFiles() {
+    this.selectedDocuments = [];
+    this.showFilesModal = false;
+  }
 }

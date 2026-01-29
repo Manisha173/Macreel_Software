@@ -69,7 +69,7 @@
 
         <!-- Clickable text only -->
           <p class="text-sm text-gray-600 hover:text-orange-500 cursor-pointer transition-colors duration-300">
-              <a class="hover:text-indigo-600 cursor-pointer"
+              <a class="hover:text-orange-500 cursor-pointer"
               [routerLink]="['/home/admin/leave-requests']" [queryParams]="{ status: 'Approved' }">
             Upcoming : <span class="font-medium">{{dashboardCount.upcomingLeaves||0}}</span>
             </a>
@@ -79,8 +79,8 @@
         Request : {{dashboardCount.leaveRequest || 0}}
     </a>
         </p>
-         <p class="text-sm text-gray-600 hover:text-indigo-600 cursor-pointer transition-colors duration-300">
-          <a class="hover:text-indigo-600 cursor-pointer" [routerLink]="['/home/admin/leave-requests']" [queryParams]="{ status: 'Absent' }">
+         <p class="text-sm text-gray-600 hover:text-orange-500 cursor-pointer transition-colors duration-300">
+          <a class="hover:text-orange-500 cursor-pointer" [routerLink]="['/home/admin/leave-requests']" [queryParams]="{ status: 'Absent' }">
           Absent : {{dashboardCount.absentEmployee||0}}
         </a>
         </p>

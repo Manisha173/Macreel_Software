@@ -7,7 +7,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Project, TableColumn } from '../../../../core/models/interface';
 import { PaginatedList } from '../../../../core/utils/paginated-list';
 import { ManageEmployeeService } from '../../../../core/services/manage-employee.service';
-import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-view-project',

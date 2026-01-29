@@ -28,7 +28,7 @@ namespace Macreel_Software.DAL.Admin
         Task<ApiResponse<List<EmpWorkingDetails>>> EmpWorkingDetailsByempCode(int empCode, int month, int year);
 
         Task<bool> AddProject(project data);
-        Task<ApiResponse<List<project>>> GetAllProject(string? SearchTerm, int? pageNumber, int? pageSize,int? userId= null);
+        Task<ApiResponse<List<project>>> GetAllProject(string? SearchTerm, int? pageNumber, int? pageSize, int? userId = null,string? status = null);
         Task<ApiResponse<List<project>>> GetAllProjectById(int id);
         Task<bool> deleteProjectById(int id);
 
@@ -41,7 +41,7 @@ namespace Macreel_Software.DAL.Admin
         Task<ApiResponse<List<Taskassign>>> getAllAssignTaskById(int id);
         Task<bool> deleteTaskById(int id);
         Task<ApiResponse<List<applyLeave>>> GetAllLeaveRequests(string? searchTerm, int? pageNumber, int? pageSize);
-        Task<bool> UpdateLeaveRequest(int id, int status, string reason = null);
+        Task<bool> UpdateLeaveRequest(int id, int status, string? reason = null);
 
         Task<ApiResponse<List<AdminDashboardCountDto>>> adminDashboardCount();
         Task<ApiResponse<List<AssignedProjectEmpListDto>>> assignedProjectEmpList(int projectId, int pmId);
