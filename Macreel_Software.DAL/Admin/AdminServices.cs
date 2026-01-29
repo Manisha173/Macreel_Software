@@ -252,9 +252,9 @@ namespace Macreel_Software.DAL.Admin
                                 stateName = sdr["stateName"] != DBNull.Value ? sdr["stateName"].ToString() : null,
                                 cityName = sdr["cityName"] != DBNull.Value ? sdr["cityName"].ToString() : null,
                                 skill = sdr["skillsJson"] != DBNull.Value
-                ? JsonSerializer.Deserialize<List<Skill>>(sdr["skillsJson"].ToString()!)
-                : new List<Skill>()
-
+                                ? JsonSerializer.Deserialize<List<Skill>>(sdr["skillsJson"].ToString()!)
+                                : new List<Skill>(),
+                                ReportingManagerName = sdr["ReportingManager"] != DBNull.Value ? sdr["ReportingManager"].ToString():null,
                             });
                         }
                     }
