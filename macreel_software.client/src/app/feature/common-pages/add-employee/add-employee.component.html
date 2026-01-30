@@ -125,9 +125,11 @@
           <select formControlName="reportingManagerId" name="reportingManagerId" class="peer w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 bg-white
            focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none">
 
+           <option [value]="0">Admin</option>
             <option *ngFor="let manager of reportingManagers" [value]="manager.id">
               {{ manager.reportingManagerName }}
             </option>
+
           </select>
 
           <label class="absolute left-3 top-2 text-sm text-gray-500 bg-white px-1 transition-all
