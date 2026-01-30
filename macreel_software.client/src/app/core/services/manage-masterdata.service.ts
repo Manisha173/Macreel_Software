@@ -27,7 +27,7 @@ export class ManageMasterdataService {
     if (pageSize !== null) params = params.set('pageSize', pageSize);
     if (searchText) params = params.set('searchTerm', searchText); // your API expects searchTerm
 
-    return this.http.get<any>(`${this.baseUrl}Master/getAllRole`, { params });
+    return this.http.get<any>(`${this.baseUrl}Common/getAllRole`, { params });
   }
 
   getRoleById(id: number) {
@@ -47,7 +47,7 @@ export class ManageMasterdataService {
     if (pageSize !== null) params = params.set('pageSize', pageSize);
     if (searchText) params = params.set('searchTerm', searchText); // your API expects searchTerm
 
-    return this.http.get<any>(`${this.baseUrl}Master/getAllDesignation`, { params });
+    return this.http.get<any>(`${this.baseUrl}Common/getAllDesignation`, { params });
   }
 
   addOrUpdateDesignation(role: any) {
@@ -70,7 +70,7 @@ export class ManageMasterdataService {
     if (pageSize !== null) params = params.set('pageSize', pageSize);
     if (searchText) params = params.set('searchTerm', searchText); // your API expects searchTerm
 
-    return this.http.get<any>(`${this.baseUrl}Master/getAllDepartment`, { params });
+    return this.http.get<any>(`${this.baseUrl}Common/getAllDepartment`, { params });
   }
 
   addOrUpdateDepartment(role: any) {
@@ -99,7 +99,7 @@ export class ManageMasterdataService {
     if (pageSize !== null) params = params.set('pageSize', pageSize);
     if (searchText) params = params.set('searchTerm', searchText);
 
-    return this.http.get<any>(`${this.baseUrl}Master/GetAllTechnology`, { params });
+    return this.http.get<any>(`${this.baseUrl}Common/GetAllTechnology`, { params });
   }
 
   // Get Technology By ID

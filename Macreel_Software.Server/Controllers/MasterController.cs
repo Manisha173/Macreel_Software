@@ -68,26 +68,7 @@ namespace Macreel_Software.Server.Controllers
         }
 
 
-        [HttpGet("getAllRole")]
-        public async Task<IActionResult> getAllRole(string? searchTerm = null,int? pageNumber = null, int?pageSize = null)
-        {
-            try
-            {
-                ApiResponse<List<role>> result =
-                    await _service.getAllRole(searchTerm, pageNumber, pageSize);
 
-      
-                return StatusCode(result.StatusCode, result);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ApiResponse<List<role>>.FailureResponse(
-                    "An error occurred while fetching role",
-                    500,
-                    "SERVER_ERROR"
-                ));
-            }
-        }
 
         [HttpGet("getRoleById")]
         public async Task<IActionResult> getRoleById(int roleId)
@@ -198,26 +179,6 @@ namespace Macreel_Software.Server.Controllers
             }
         }
 
-
-        [HttpGet("getAllDepartment")]
-        public async Task<IActionResult> getAllDepartment( string? searchTerm = null,int? pageNumber = null,
-     int? pageSize = null)
-        {
-            try
-            {
-                var response = await _service.getAllDepartment(searchTerm, pageNumber, pageSize);
-
-                return StatusCode(response.StatusCode, response);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ApiResponse<List<department>>.FailureResponse(
-                    "An unexpected error occurred",
-                    500,
-                    "SERVER_ERROR"
-                ));
-            }
-        }
 
 
 
@@ -336,26 +297,7 @@ namespace Macreel_Software.Server.Controllers
         }
 
 
-        [HttpGet("getAllDesignation")]
-        public async Task<IActionResult> getAllDesignation( string? searchTerm = null,int? pageNumber = null,
-        int? pageSize = null)
-        {
-            try
-            {
-                var response = await _service.getAllDesignation(searchTerm, pageNumber, pageSize);
-
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ApiResponse<List<designation>>.FailureResponse(
-                    "An error occurred while fetching designation",
-                    500,
-                    errorCode: "SERVER_ERROR"
-                ));
-            }
-        }
-
+   
 
         [HttpGet("getDesignationById")]
         public async Task<IActionResult> getDesignationById(int desId)
@@ -466,47 +408,6 @@ namespace Macreel_Software.Server.Controllers
                 return StatusCode(500, ApiResponse<object>.FailureResponse(
                     "Internal server error",
                     500
-                ));
-            }
-        }
-
-
-        [HttpGet("GetAllTechnology")]
-        public async Task<IActionResult> getAllTechnology(string? searchTerm,
-          int? pageNumber,
-          int? pageSize)
-        {
-            try
-            {
-                var result = await _service.getAllTechnology(searchTerm, pageNumber, pageSize);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ApiResponse<List<technology>>.FailureResponse(
-                    "An error occurred while fetching technology",
-                    500,
-                    errorCode: "SERVER_ERROR"
-                ));
-            }
-        }
-
-
-
-        [HttpGet("GetAllTechnologyById")]
-        public async Task<IActionResult> getAllTechnologybyId(int id)
-        {
-            try
-            {
-                var result = await _service.getAllTechnologyById(id);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ApiResponse<List<technology>>.FailureResponse(
-                    "An error occurred while fetching technology",
-                    500,
-                    errorCode: "SERVER_ERROR"
                 ));
             }
         }
