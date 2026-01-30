@@ -112,7 +112,7 @@ export class ViewTaskComponent implements OnInit {
 }
   
 
-  // Open modal
+
 openFiles(docs: string[] = []) {
   if (!docs.length) return;
 
