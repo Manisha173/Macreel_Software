@@ -276,6 +276,7 @@ namespace Macreel_Software.DAL.Employee
                         leaveCount = sdr["leaveCount"] as int?,
                         leaveName = sdr["leaveName"]?.ToString(),
                         description = sdr["description"]?.ToString(),
+                        reason = sdr["adminDescription"]?.ToString(),
                         applieddate = sdr["appliedDate"] != DBNull.Value ? Convert.ToDateTime(sdr["appliedDate"]) : null,
                         status = Convert.ToInt32(sdr["adminStatus"]) == 0 ? "Pending" : Convert.ToInt32(sdr["adminStatus"]) == 1 ? "Approved" : Convert.ToInt32(sdr["adminStatus"]) == 2 ? "Unapproved" : ""
                     });
