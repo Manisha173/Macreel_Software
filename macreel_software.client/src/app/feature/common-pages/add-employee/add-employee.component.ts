@@ -73,10 +73,11 @@ export class AddEmployeeComponent implements OnInit {
 
   ngOnInit(): void {
     this.employeeForm = this.fb.group({
+
       empRoleId: ['', Validators.required],
       empCode: ['', Validators.required],
       empName: ['', Validators.required],
-      mobile: ['', Validators.required],
+      mobile: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
       departmentId: ['', Validators.required],
       designationId: ['', Validators.required],
       emailId: ['', [Validators.required, Validators.email]],
@@ -98,7 +99,7 @@ export class AddEmployeeComponent implements OnInit {
       ifscCode: ['', Validators.required],
       bankBranch: ['', Validators.required],
       emergencyContactPersonName: ['', Validators.required],
-      emergencyContactNum: ['', Validators.required],
+      emergencyContactNum: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
 
       // IMPORTANT - Multi select array
       skillIds: [[]],
@@ -116,7 +117,11 @@ export class AddEmployeeComponent implements OnInit {
       panBackImg: [null, Validators.required],
 
       addedBy: [1],
+
+
     });
+
+
 
     //for send reg link
     this.sendLinkForm = this.fb.group({
@@ -134,7 +139,7 @@ export class AddEmployeeComponent implements OnInit {
     if (this.employeeId) {
       this.isEditMode = true;
       this.employeeForm.get('password')?.disable();
-      this.employeeForm.get('emailId')?.disable();
+      // this.employeeForm.get('emailId')?.disable();
 
       this.disableFileValidationForEdit();
       this.getEmployeeById(this.employeeId);
@@ -146,6 +151,12 @@ export class AddEmployeeComponent implements OnInit {
 
 
     this.checkAccessId();
+  }
+
+  limit10(e: any) {
+    if (e.target.value.length > 10) {
+      e.target.value = e.target.value.slice(0, 10);
+    }
   }
 
   private handleDepartmentChange(deptId: any): void {
@@ -307,6 +318,8 @@ export class AddEmployeeComponent implements OnInit {
           empCode: emp.empCode,
           empName: emp.empName,
           mobile: emp.mobile,
+          emailId: emp.emailId,
+          password: emp.password,
           departmentId: Number(emp.departmentId),
           designationId: Number(emp.designationId),
           salary: emp.salary,

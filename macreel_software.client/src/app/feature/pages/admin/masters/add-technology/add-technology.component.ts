@@ -16,7 +16,7 @@ export class AddTechnologyComponent implements OnInit {
 
   softwareType: string = '';
   technologyName: string = '';
-  data : any = [];
+  data: any = [];
   displayedColumns: string[] = ['srNo', 'softwareType', 'technologyName', 'action'];
   dataSource = new MatTableDataSource<TechnologyElement>([]);
 
@@ -33,12 +33,12 @@ export class AddTechnologyComponent implements OnInit {
   editingId: number | null = null;
 
   constructor(private master: ManageMasterdataService) { }
-  
-   technolgy: TableColumn<TechnologyElement>[] = [
-       { key: 'softwareType', label: 'Software Name' },
-        { key: 'technologyName', label: 'Technology Name' },
-      
-     ];
+
+  technolgy: TableColumn<TechnologyElement>[] = [
+    { key: 'softwareType', label: 'Software Name' },
+    { key: 'technologyName', label: 'Technology Name' },
+
+  ];
 
   ngOnInit(): void {
     this.loadTechnology();
@@ -108,9 +108,21 @@ export class AddTechnologyComponent implements OnInit {
         this.resetForm();
         this.loadTechnology();
       },
-      error: () => {
-        Swal.fire({ icon: 'error', title: 'Error saving data' });
+      error: (err) => {
+        console.error('API Error 👉', err);
+
+        const errorMessage =
+          err?.error?.message ||
+          err?.error?.errorMessage ||
+          'Something went wrong';
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Error!',
+          text: errorMessage
+        });
       }
+
     });
   }
 

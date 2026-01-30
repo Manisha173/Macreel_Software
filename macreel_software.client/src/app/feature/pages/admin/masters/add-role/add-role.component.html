@@ -49,45 +49,15 @@
         Role List
       </h1>
 
-      <!-- RIGHT SIDE: SEARCH + PAGINATOR -->
-      <!-- <div class="flex flex-col md:flex-row md:items-center gap-2 w-full md:w-auto justify-end">
-
-      
-        <div class="relative">
-          <input type="text" placeholder="Search Role" (keyup)="applyFilter($event)" class=" pl-10 pr-3 py-[6px] text-[12px] rounded-lg bg-[#F6F7FB] border border-gray-300
-               focus:outline-none focus:ring-2 focus:ring-[#C5192F] table-search" />
-          <i
-            class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-[12px]"></i>
-        </div>
-
    
-        <div class="w-full md:w-auto">
-          <mat-paginator [pageSizeOptions]="[20,50,100]" [pageSize]="pageSize" [length]="totalRecords"
-            showFirstLastButtons (page)="onPageChange($event)">
-          </mat-paginator>
-        </div>
-
-      </div> -->
-<form class="relative w-full md:w-60">
-      <input type="text" formControlName="search" placeholder="Search projects"
-        class="w-full h-8 rounded-lg border border-gray-300 pl-8 pr-3 text-[12px] text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-[#dd3d4f] focus:border-[#dd3d4f]" />
-    </form>
-  </div>
-
-   <app-generic-table
-  [columns]="Roles"
-  [data]=" data"
-  (edit)="editRole($event)"
-  (delete)="deleteRole($event)"
- >
-</app-generic-table>
-
+      <form class="relative w-full md:w-60">
+        <input type="text" formControlName="search" placeholder="Search projects"
+          class="w-full h-8 rounded-lg border border-gray-300 pl-8 pr-3 text-[12px] text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-[#dd3d4f] focus:border-[#dd3d4f]" />
+      </form>
     </div>
 
+    <app-generic-table [columns]="Roles" [data]=" data" (edit)="editRole($event)" (delete)="deleteRole($event)">
+    </app-generic-table>
 
-   
-    <!-- ================= TABLE WRAPPER ================= -->
-
-
-
+  </div>
 </div>
