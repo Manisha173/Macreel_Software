@@ -13,7 +13,10 @@ export interface EmployeeDetails {
   departmentName: string;
   designationId: string;
   designationName: string;
-  reportingManagerId: string;
+
+  // reportingManagerId: string;
+  reportingManagerName: string;
+
   emailId: string;
   dateOfJoining: string;
   yearOfExperience: number;

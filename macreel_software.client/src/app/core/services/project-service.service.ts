@@ -12,11 +12,13 @@ export class ProjectService {
   constructor(private readonly http: HttpClient) { }
 
   // Get projects with table-only loader (disable global loader)
-  getProjects(search: string, page: number, size: number): Observable<PaginatedResult<Project>> {
+  getProjects(search: string, page: number, size: number,status:string =''): Observable<PaginatedResult<Project>> {
     let params = new HttpParams()
       .set('searchTerm', search)
       .set('pageNumber', page)
+      .set('status', status)
       .set('pageSize', size);
+      
 
     return this.http.get<PaginatedResult<Project>>(`${this.baseUrl}Common/getAllProject`, { params });
   }

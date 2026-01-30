@@ -17,10 +17,10 @@ export class TaskService {
 
   constructor(private readonly http: HttpClient) {}
 
-getTasks(search = '', page = 1, size = 20) {
+getTasks(search = '', page = 1, size = 20,status:string='') {
   return this.http.get<PaginatedResult<Task>>(
     `${this.baseUrl}Admin/getAllAssignTask`,
-    { params: { search, page, size } }
+    { params: { search, page, size,status } }
   );
 }
 
