@@ -117,11 +117,7 @@ export class AddEmployeeComponent implements OnInit {
       panBackImg: [null, Validators.required],
 
       addedBy: [1],
-
-
     });
-
-
 
     //for send reg link
     this.sendLinkForm = this.fb.group({
@@ -354,15 +350,19 @@ export class AddEmployeeComponent implements OnInit {
 
           this.loadTechnologies().then(() => {
 
-            const skillIds = emp.skill.map((s: any) => s.techid);
+            const skillIds = emp.skill.map((s: any) => s.techId);
 
             console.log("my tech ID", skillIds)
 
-            // 🔥 FIX: Match by ID + Name (safe binding)
+            // this.selectedTechnologies = this.technologies.filter(t =>
+            //   skillIds.includes(t.id) ||
+            //   emp.skill.some((s: any) => s.skillName === t.technologyName)
+            // );
+
             this.selectedTechnologies = this.technologies.filter(t =>
-              skillIds.includes(t.id) ||
-              emp.skill.some((s: any) => s.skillName === t.technologyName)
+              skillIds.includes(t.id)
             );
+
 
             this.employeeForm.get('skillIds')?.setValue(skillIds);
           });
@@ -557,7 +557,8 @@ export class AddEmployeeComponent implements OnInit {
             : 'Employee added successfully',
           'success',
         ).then(() => {
-          this.router.navigate(['/home/employee-list']);
+          this.router.navigate(['/home/admin/employee-list']);
+          
         });
       },
       error: () => {

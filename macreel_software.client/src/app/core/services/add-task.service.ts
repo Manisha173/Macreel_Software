@@ -22,7 +22,7 @@ export class TaskService {
 getTasks(
   searchTerm: string = '',
   pageNumber: number = 1,
-  pageSize: number = 20,
+  pageSize: number = 100,
   statusTerm: string = ''
 ) {
   return this.http.get<PaginatedResult<Task>>(
