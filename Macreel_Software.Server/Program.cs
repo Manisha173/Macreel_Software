@@ -47,6 +47,7 @@ builder.Services.AddScoped<IEmployeeService, EmployeeServices>();
 builder.Services.AddScoped<FileUploadService>();
 builder.Services.AddScoped<MailSender>();
 builder.Services.AddScoped<PasswordEncrypt>();
+builder.Services.AddMemoryCache();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular",
