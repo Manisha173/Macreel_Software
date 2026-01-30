@@ -102,7 +102,7 @@ export class ViewProjectComponent implements OnInit, AfterViewInit {
 
     this.paginator = new PaginatedList<Project>(
       30,
-      (search, page, size) => this.projectService.getProjects(search, page, size)
+      (search, page, size) => this.projectService.getProjects(search, page, size,this.status)
     );
 
     this.paginator.load();
@@ -115,19 +115,7 @@ export class ViewProjectComponent implements OnInit, AfterViewInit {
       });
   }
 
- get tasks(): Project[] 
- {
-    console.log("ad",this.status)
-
-  if (!this.paginator?.items) return [];
-
-  const mappedTasks = this.paginator.items.map(task => ({
-    ...task,
-  }));
-
-     return this.status ? mappedTasks.filter(task => task.projectStatus == this.status)
-    : mappedTasks;
-}
+ 
   ngAfterViewInit(): void {
 
   }
