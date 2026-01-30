@@ -46,7 +46,7 @@ export interface EmployeeDetails {
   experienceCertificatePath: string;
   tenthCertificatePath: string;
   twelthCertificatePath: string;
-  graduationCertificatePathan: string;
+  graduationCertificatePath: string;
   mastersCertificatePath: string;
   skill: any[];
   companyContactNo: number;

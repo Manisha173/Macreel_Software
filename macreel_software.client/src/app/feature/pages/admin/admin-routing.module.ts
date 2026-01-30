@@ -40,11 +40,10 @@ const routes: Routes = [
       { path: 'project-details', component: ProjectDetailsComponent },
       { path: 'employee-details', component: EmployeeDetailsComponent },
       { path: 'employee-details', component: EmployeeDetailsComponent },
-      {path:'add-employee',component:AddEmployeeComponent},
-      {path:'project-progress',component:ProjectProgressComponent},
-      {path:'project-details',component:ProjectDetailsComponent},
-      {path:'edit-employee/:id',component:AddEmployeeComponent}
-
+      { path: 'add-employee', component: AddEmployeeComponent },
+      { path: 'project-progress', component: ProjectProgressComponent },
+      { path: 'edit-employee/:id', component: AddEmployeeComponent },
+      { path: 'project-details', component: ProjectDetailsComponent }
     ]
   }
 ];
