@@ -7,8 +7,7 @@
         [src]="employee.profilePicPath 
           ? pdfBaseUrl + employee.profilePicPath 
           : 'https://static.vecteezy.com/system/resources/previews/027/951/137/non_2x/stylish-spectacles-guy-3d-avatar-character-illustrations-png.png'"
-        class="w-16 h-16 rounded-full object-cover border-2 border-gray-300 shadow-sm"
-      />
+        class="w-16 h-16 rounded-full object-cover border-2 border-gray-300 shadow-sm" />
       <div>
         <h1 class="text-xl font-bold text-gray-600">{{ employee.empName || '—' }}</h1>
         <p class="text-gray-400">{{ employee.designationName || '—' }} | {{ employee.departmentName || '—' }}</p>
@@ -67,7 +66,9 @@
         {icon:'fa-credit-card', label:'Account No', value: employee.accountNo},
         {icon:'fa-credit-card', label:'IFSC', value: employee.ifscCode},
         {icon:'fa-id-card', label:'PAN', value: employee.panImgPath ? 'Available' : 'Not Available', link: employee.panImgPath},
-        {icon:'fa-address-card', label:'Aadhaar', value: employee.aadharImgPath ? 'Available' : 'Not Available', link: employee.aadharImgPath}
+        {icon:'fa-id-card', label:'PAN Back', value: employee.panBackImgPath ? 'Available' : 'Not Available', link: employee.panBackImgPath},
+        {icon:'fa-address-card', label:'Aadhaar', value: employee.aadharImgPath ? 'Available' : 'Not Available', link: employee.aadharImgPath},
+        {icon:'fa-address-card', label:'Aadhaar back', value: employee.aadharBackImgPath ? 'Available' : 'Not Available', link: employee.aadharBackImgPath}
       ]">
         <div class="flex items-center gap-3">
           <i class="fa-solid {{item.icon}} text-green-400 mt-1 w-5"></i>
@@ -75,7 +76,8 @@
             <p class="text-gray-400 text-xs">{{ item.label }}</p>
             <p class="font-medium text-gray-700 inline-flex items-center gap-1">
               {{ item.value }}
-              <a *ngIf="item.link" [href]="pdfBaseUrl+item.link" target="_blank" class="text-blue-600 hover:text-green-400 hover:bg-green-100 text-xs px-1 rounded">View</a>
+              <a *ngIf="item.link" [href]="pdfBaseUrl+item.link" target="_blank"
+                class="text-blue-600 hover:text-green-400 hover:bg-green-100 text-xs px-1 rounded">View</a>
             </p>
           </div>
         </div>
@@ -100,7 +102,8 @@
             <p class="text-gray-400 text-xs">{{ item.label }}</p>
             <p class="font-medium text-gray-700 inline-flex items-center gap-1">
               {{ item.value }}
-              <a *ngIf="item.link" [href]="pdfBaseUrl+item.link" target="_blank" class="text-blue-600 hover:text-green-400 hover:bg-green-100 text-xs px-1 rounded">View</a>
+              <a *ngIf="item.link" [href]="pdfBaseUrl+item.link" target="_blank"
+                class="text-blue-600 hover:text-green-400 hover:bg-green-100 text-xs px-1 rounded">View</a>
             </p>
           </div>
         </div>
@@ -127,7 +130,8 @@
             <p class="text-gray-400 text-xs">{{ item.label }} Certificate</p>
             <p class="font-medium text-gray-700 inline-flex items-center gap-1">
               {{ item.value }}
-              <a *ngIf="item.link" [href]="pdfBaseUrl+item.link" target="_blank" class="text-blue-600 hover:text-green-400 hover:bg-green-100 text-xs px-1 rounded">View</a>
+              <a *ngIf="item.link" [href]="pdfBaseUrl+item.link" target="_blank"
+                class="text-blue-600 hover:text-green-400 hover:bg-green-100 text-xs px-1 rounded">View</a>
             </p>
           </div>
         </div>

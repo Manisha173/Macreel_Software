@@ -117,11 +117,7 @@ export class AddEmployeeComponent implements OnInit {
       panBackImg: [null, Validators.required],
 
       addedBy: [1],
-
-
     });
-
-
 
     //for send reg link
     this.sendLinkForm = this.fb.group({

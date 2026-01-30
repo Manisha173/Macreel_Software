@@ -470,13 +470,12 @@
         </div>
 
 
-        <div *ngIf="showTechnologySection"
-          class="relative  flex items-center w-full min-h-[48px] multiple-select-div mt-6">
+        <div>
           <mat-label class="tech-label">Technology</mat-label>
           <mat-form-field floatLabel="always" class="w-full d-flex !p-0 !m-0
            [&_.mat-form-field-outline]:!text-gray-300 ">
             <mat-chip-grid #chipGrid aria-label="Technology selection" class="">
-              <mat-chip-row *ngFor="let tech of selectedTechnologies" (removed)="removeTechnology(tech)"
+              <mat-chip-row *ngFor="let tech of selectedTechnologies || []" (removed)="removeTechnology(tech)"
                 class="!bg-gray-100 !border !border-gray-300 !text-gray-700">
 
                 {{ tech.technologyName }}
