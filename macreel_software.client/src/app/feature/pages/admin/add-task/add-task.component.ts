@@ -53,9 +53,6 @@ export class AddTaskComponent implements OnInit {
       durationCtrl?.updateValueAndValidity();
     });
 
-
-
-
     this.loadEmployees();
 
     const state = history.state;
