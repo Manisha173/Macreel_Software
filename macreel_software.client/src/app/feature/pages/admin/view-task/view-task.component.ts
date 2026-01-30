@@ -62,7 +62,7 @@ export class ViewTaskComponent implements OnInit {
 
     this.paginator = new PaginatedList<Task>(
       20,
-      (search, page, size) => this.taskService.getTasks(search, page, size)
+      (search, page, size) => this.taskService.getTasks(search, page, size,this.status)
     );
 
     this.paginator.load();
@@ -102,14 +102,13 @@ export class ViewTaskComponent implements OnInit {
 
   if (!this.paginator?.items) return [];
 
-  const mappedTasks = this.paginator.items.map(task => ({
+   return  this.paginator.items.map(task => ({
     ...task,
     uploadedDocuments: [task.document1Path, task.document2Path]
       .filter((doc): doc is string => !!doc && doc.trim() !== '')
   }));
 
-     return this.status ? mappedTasks.filter(task => task.adminTaskStatus == this.status)
-    : mappedTasks;
+    
 }
   
 

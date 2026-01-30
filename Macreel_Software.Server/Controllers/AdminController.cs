@@ -989,12 +989,12 @@ namespace Macreel_Software.Server.Controllers
 
 
         [HttpGet("getAllAssignTask")]
-        public async Task<IActionResult> getAllAssignTask(string? searchTerm = null, int? pageNumber = null, int? pageSize = null)
+        public async Task<IActionResult> getAllAssignTask(string? searchTerm = null, int? pageNumber = null, int? pageSize = null,string? statusTerm=null)
         {
             try
             {
                 ApiResponse<List<TaskAssignDto>> result =
-                    await _services.getAllAssignTask(searchTerm, pageNumber, pageSize);
+                    await _services.getAllAssignTask(searchTerm, pageNumber, pageSize,_userId, statusTerm);
 
 
                 return StatusCode(result.StatusCode, result);
