@@ -273,6 +273,7 @@ if (status !== 'Approved') {
 
 
   openFile(filePath: string) {
+    debugger
     console.log("File path:", filePath);
     this.selectedDocuments = Array.isArray(filePath)
       ? filePath.map(doc => `${this.pdfUrl}${doc}`)

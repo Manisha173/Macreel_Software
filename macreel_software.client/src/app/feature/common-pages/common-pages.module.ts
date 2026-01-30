@@ -14,6 +14,7 @@ import { SafeUrlPipe } from "../../core/pipes/capitalize.pipe";
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { ProjectProgressComponent } from './project-progress/project-progress.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 
@@ -23,7 +24,8 @@ import { ProjectProgressComponent } from './project-progress/project-progress.co
      GenericTableComponent,
      ProjectDetailsComponent,
      EmployeeDetailsComponent,
-     ProjectProgressComponent
+     ProjectProgressComponent,
+     ChangePasswordComponent
   ],
   imports: [
     CommonModule,

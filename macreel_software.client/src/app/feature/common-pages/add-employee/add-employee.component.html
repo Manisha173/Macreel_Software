@@ -37,7 +37,7 @@
 
         <!-- Employee Code -->
         <div class="relative">
-          <input type="text" formControlName="empCode" name="empCode" placeholder=" " class="peer w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700
+          <input type="number" formControlName="empCode" name="empCode" placeholder=" " class="peer w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700
            focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none" />
           <label class="absolute left-3 top-2 text-sm text-gray-500 bg-white px-1 transition-all
            peer-focus:-top-2 peer-focus:text-xs
@@ -142,7 +142,7 @@
         <!-- Email ID -->
         <div class="relative">
           <input type="email" formControlName="emailId" name="emailId" autocomplete="off" placeholder=" " class="peer w-full rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700
-           focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none" [readonly]="showSendLinkButton" [readonly]="isEditMode" />
+           focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none" [readonly]="isEditMode || showSendLinkButton" />
 
           <label class="absolute left-3 top-[-10px] text-sm text-gray-500 bg-white px-1 transition-all
            peer-focus:-top-2 peer-focus:text-xs
@@ -364,7 +364,7 @@
 
         <!-- Account Number -->
         <div class="relative">
-          <input type="text" formControlName="accountNo" name="accountNo" placeholder=" " class="peer w-full rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700
+          <input type="number" formControlName="accountNo" name="accountNo" placeholder=" " class="peer w-full rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700
            focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none" />
 
           <label class="absolute left-3 top-2 text-sm text-gray-500 bg-white px-1 transition-all
@@ -427,6 +427,14 @@
           </label>
         </div>
 
+         <!-- Profile Image -->
+        <div class="relative">
+          <label class="block text-sm font-medium text-gray-500 mb-1">Profile Image <span
+              class="text-red-500 text-[14px] font-medium">*</span></label>
+          <input type="file" (change)="onFileSelected($event, 'profile')" accept=".jpg,.jpeg,.png"
+            class="w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-3 file:border-0 file:text-sm file:font-semibold file:bg-[#C5192F] file:text-white hover:file:bg-[#a41526] cursor-pointer border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C5192F]/30" />
+        </div>
+
 
         <!-- Aadhar Image -->
         <div class="relative">
@@ -462,22 +470,12 @@
         </div>
 
 
-        <!-- Profile Image -->
-        <div class="relative">
-          <label class="block text-sm font-medium text-gray-500 mb-1">Profile Image <span
-              class="text-red-500 text-[14px] font-medium">*</span></label>
-          <input type="file" (change)="onFileSelected($event, 'profile')" accept=".jpg,.jpeg,.png"
-            class="w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-3 file:border-0 file:text-sm file:font-semibold file:bg-[#C5192F] file:text-white hover:file:bg-[#a41526] cursor-pointer border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C5192F]/30" />
-        </div>
-
-
-        <div *ngIf="showTechnologySection"
-          class="relative  flex items-center w-full min-h-[48px] multiple-select-div mt-6">
+        <div>
           <mat-label class="tech-label">Technology</mat-label>
           <mat-form-field floatLabel="always" class="w-full d-flex !p-0 !m-0
            [&_.mat-form-field-outline]:!text-gray-300 ">
             <mat-chip-grid #chipGrid aria-label="Technology selection" class="">
-              <mat-chip-row *ngFor="let tech of selectedTechnologies" (removed)="removeTechnology(tech)"
+              <mat-chip-row *ngFor="let tech of selectedTechnologies || []" (removed)="removeTechnology(tech)"
                 class="!bg-gray-100 !border !border-gray-300 !text-gray-700">
 
                 {{ tech.technologyName }}
