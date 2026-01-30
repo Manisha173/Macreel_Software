@@ -141,8 +141,8 @@
 
         <!-- Email ID -->
         <div class="relative">
-          <input type="email" formControlName="emailId" readonly name="emailId" autocomplete="off" placeholder=" " class="peer w-full rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700
-           focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none" [readonly]="showSendLinkButton"  style="pointer-events: none; background-color: #f3f4f6; cursor: not-allowed;"/>
+          <input type="email" formControlName="emailId" name="emailId" autocomplete="off" placeholder=" " class="peer w-full rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700
+           focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none" [readonly]="showSendLinkButton" [readonly]="isEditMode" />
 
           <label class="absolute left-3 top-[-10px] text-sm text-gray-500 bg-white px-1 transition-all
            peer-focus:-top-2 peer-focus:text-xs
@@ -191,16 +191,17 @@
 
         <!-- Password -->
         <div class="relative">
-          <input [type]="showPassword ? 'text' : 'password'" formControlName="password"  [readonly]="true"
-            name="user_password" autocomplete="new-password" placeholder=" " class="peer w-full rounded-md border border-gray-300 px-4 py-2 pr-10 text-sm text-gray-700
-           focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none" />
+          <input [type]="showPassword ? 'text' : 'password'" formControlName="password" name="user_password"
+            autocomplete="new-password" placeholder=" " class="peer w-full rounded-md border border-gray-300 px-4 py-2 pr-10 text-sm text-gray-700
+           focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none" [readonly]="isEditMode"/>
 
           <!-- Floating Label -->
-          <label class="absolute left-3 top-2 text-sm text-gray-500 bg-white px-1 transition-all
-           peer-focus:-top-2 peer-focus:text-xs
-           peer-valid:-top-2 peer-valid:text-xs">
+          <label class="absolute left-3 top-[-10px] text-sm text-gray-500 bg-white px-1 transition-all
+  peer-focus:-top-2 peer-focus:text-xs
+  peer-valid:-top-2 peer-valid:text-xs">
             Password <span class="text-red-500 text-[16px] font-medium">*</span>
           </label>
+
 
           <!-- Eye Button -->
           <button type="button" (click)="togglePassword()" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500

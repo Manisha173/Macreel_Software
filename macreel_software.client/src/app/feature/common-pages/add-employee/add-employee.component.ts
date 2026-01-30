@@ -138,11 +138,14 @@ export class AddEmployeeComponent implements OnInit {
 
     if (this.employeeId) {
       this.isEditMode = true;
-      this.employeeForm.get('password')?.disable();
+      //this.employeeForm.get('password')?.disable();
       // this.employeeForm.get('emailId')?.disable();
 
       this.disableFileValidationForEdit();
       this.getEmployeeById(this.employeeId);
+    } else {
+      this.isEditMode = false;
+      this.employeeForm.reset();
     }
 
     this.employeeForm.get('departmentId')?.valueChanges.subscribe((deptId) => {
