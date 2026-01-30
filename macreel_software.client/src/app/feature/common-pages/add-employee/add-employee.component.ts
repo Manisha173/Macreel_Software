@@ -91,7 +91,7 @@ export class AddEmployeeComponent implements OnInit {
       presentAddress: ['', Validators.required],
       stateId: ['', Validators.required],
       cityId: ['', Validators.required],
-      reportingManagerId: ['', Validators.required],
+      reportingManagerId: [''],
 
       pincode: ['', Validators.required],
       bankName: ['', Validators.required],
@@ -117,7 +117,11 @@ export class AddEmployeeComponent implements OnInit {
       panBackImg: [null, Validators.required],
 
       addedBy: [1],
+
+
     });
+
+
 
     //for send reg link
     this.sendLinkForm = this.fb.group({
@@ -401,7 +405,7 @@ export class AddEmployeeComponent implements OnInit {
       'stateId',
       'cityId',
 
-      'reportingManagerId',
+      
       'pincode',
       'bankName',
       'accountNo',
