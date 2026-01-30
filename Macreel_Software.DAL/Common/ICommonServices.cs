@@ -17,7 +17,7 @@ namespace Macreel_Software.DAL.Common
         Task<bool> deleteRuleBookById(int id);
         Task<bool> sendMailForReg(sendMailForReg data, string accessId);
         Task<ApiResponse<List<SendEmailForRegistrationDto>>> getEmailByAccessByIdForReg(string accessId);
-        Task<bool> InsertProjectEmp(ProjectEmp data, int? addedBy);
+        Task<bool> InsertProjectEmp(ProjectEmp data, int? userid,string? addedBy);
         Task<ApiResponse<List<AssignedProjectEmpDto>>> AssignedProjectEmpList(int projectId);
         Task<bool> UpdateProjectEmpStatusSingle(ProjectEmpStatusItem model, int adminId);
     }

@@ -364,7 +364,7 @@ namespace Macreel_Software.DAL.Common
         #endregion
 
         #region project Employee
-        public async Task<bool> InsertProjectEmp(ProjectEmp data, int? addedBy)
+        public async Task<bool> InsertProjectEmp(ProjectEmp data, int? userid, string? addedBy)
         {
             bool isInserted = false;
 
@@ -390,7 +390,7 @@ namespace Macreel_Software.DAL.Common
                     cmd.Parameters.AddWithValue("@action", "insertProjectEmp");
                     cmd.Parameters.AddWithValue("@projectId", data.projectId);
                     cmd.Parameters.AddWithValue("@empId", empId);
-                    cmd.Parameters.AddWithValue("@pmId", addedBy);
+                    cmd.Parameters.AddWithValue("@pmId", userid);
                     cmd.Parameters.AddWithValue("@addedBy", addedBy);
 
                     int rows = await cmd.ExecuteNonQueryAsync();

@@ -509,7 +509,7 @@ namespace Macreel_Software.Server.Controllers
         {
             try
             {
-                bool res = await _service.InsertProjectEmp(data, _userId);
+                bool res = await _service.InsertProjectEmp(data, _userId,_role);
 
                 if (res)
                 {
