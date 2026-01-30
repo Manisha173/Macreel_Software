@@ -18,7 +18,6 @@ import { EmployeeDetailsComponent } from '../../common-pages/employee-details/em
 import { LayoutComponent } from './layout/layout.component';
 import { ProjectProgressComponent } from '../../common-pages/project-progress/project-progress.component';
 
-
 const routes: Routes = [
   {
     path: '', component: LayoutComponent,
