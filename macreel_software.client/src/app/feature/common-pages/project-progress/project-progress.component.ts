@@ -1,9 +1,5 @@
 import {
-  Component,
-  TemplateRef,
-  ViewChild,
-  OnInit,
-  AfterViewInit
+  Component, TemplateRef, ViewChild, OnInit, AfterViewInit
 } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
@@ -13,6 +9,7 @@ import Swal from 'sweetalert2';
 import { Project, TableColumn } from '../../../core/models/interface';
 import { PaginatedList } from '../../../core/utils/paginated-list';
 import { ProjectService } from '../../../core/services/project-service.service';
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-project-progress',
@@ -37,7 +34,8 @@ export class ProjectProgressComponent implements OnInit, AfterViewInit {
   constructor(
     private fb: FormBuilder,
     private projectService: ProjectService,
-    private router: Router
+    private router: Router,
+    private AuthService: AuthService
   ) { }
 
   // ---------- INIT ----------
@@ -49,7 +47,7 @@ export class ProjectProgressComponent implements OnInit, AfterViewInit {
     this.paginator = new PaginatedList<Project>(
       30,
       (search, page, size) =>
-        this.projectService.getProjects(search, page, size,'')
+        this.projectService.getProjects(search, page, size, '')
     );
 
     this.paginator.load();
@@ -62,6 +60,22 @@ export class ProjectProgressComponent implements OnInit, AfterViewInit {
       });
   }
 
+  getProjectDetailsRoute(): string {
+    const role = this.AuthService.getRole(); // cookie key
+
+    if (role === 'employee') {
+      return '/home/employee/project-details';
+    }
+
+    if (role === 'admin') {
+      return '/home/admin/project-details';
+    }
+
+    return '/home';
+    
+  }
+
+
   // ---------- VIEW INIT (Templates SAFE HERE) ----------
   ngAfterViewInit(): void {
     this.projectColumns = [
@@ -69,7 +83,7 @@ export class ProjectProgressComponent implements OnInit, AfterViewInit {
         key: 'projectTitle',
         label: 'Project',
         clickable: true,
-        route: '/home/admin/project-details'
+        route: this.getProjectDetailsRoute()
       },
       { key: 'category', label: 'Category' },
       { key: 'startDate', label: 'Start Date', type: 'date', align: 'center' },

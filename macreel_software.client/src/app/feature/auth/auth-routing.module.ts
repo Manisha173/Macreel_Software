@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { AddEmployeeComponent } from '../common-pages/add-employee/add-employee.component';
 import { authGuard } from '../../core/guards/guards/auth.guard';
 import { roleGuard } from '../../core/guards/guards/role.guard';
+import { ProjectDetailsComponent } from '../common-pages/project-details/project-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -14,10 +15,7 @@ const routes: Routes = [
     canActivate: [authGuard],
     children: [
       { path: '', loadChildren: () => import('../pages/pages.module').then(m => m.PagesModule) },
-      { path: 'add-employee', component: AddEmployeeComponent,
-        canActivate:[authGuard,roleGuard],
-        data:['admin']
-       }
+      {path:'common-pages',loadChildren:()=>import('../common-pages/common-pages.module').then(c=>c.CommonPagesModule)},      
     ]
   }
 ];
