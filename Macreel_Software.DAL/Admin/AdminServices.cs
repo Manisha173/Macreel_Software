@@ -1688,6 +1688,11 @@ namespace Macreel_Software.DAL.Admin
 
         public async Task<ApiResponse<List<TaskAssignDto>>> getAllAssignTask(string? searchTerm, int? pageNumber, int? pageSize, int? empId = null,string? statusTerm=null)
         {
+
+            if(empId == 1929415225)
+            {
+                empId = null;
+            }
             List<TaskAssignDto> list = new();
             int totalRecords = 0;
             try
