@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from '../pages/admin/layout/layout.component';
 
-const routes: Routes = [];
+import { ChangePasswordComponent } from './change-password/change-password.component';
+
+const routes: Routes = [
+  {path:'',redirectTo:'change-password',pathMatch:'full'},
+  {path:'change-password',component:ChangePasswordComponent}
+];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
