@@ -663,6 +663,105 @@ namespace Macreel_Software.Server.Controllers
         #endregion
 
 
+        #region role
 
+
+        [HttpGet("getAllRole")]
+        public async Task<IActionResult> getAllRole(string? searchTerm = null, int? pageNumber = null, int? pageSize = null)
+        {
+            try
+            {
+                ApiResponse<List<role>> result =
+                    await _masterservice.getAllRole(searchTerm, pageNumber, pageSize);
+
+
+                return StatusCode(result.StatusCode, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponse<List<role>>.FailureResponse(
+                    "An error occurred while fetching role",
+                    500,
+                    "SERVER_ERROR"
+                ));
+            }
+        }
+        #endregion
+
+
+        #region department
+        [HttpGet("getAllDepartment")]
+        public async Task<IActionResult> getAllDepartment(string? searchTerm = null, int? pageNumber = null,
+        int? pageSize = null)
+        {
+            try
+            {
+                var response = await _masterservice.getAllDepartment(searchTerm, pageNumber, pageSize);
+
+                return StatusCode(response.StatusCode, response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponse<List<department>>.FailureResponse(
+                    "An unexpected error occurred",
+                    500,
+                    "SERVER_ERROR"
+                ));
+            }
+        }
+
+
+
+        #endregion
+
+        #region technology
+
+
+        [HttpGet("GetAllTechnology")]
+        public async Task<IActionResult> getAllTechnology(string? searchTerm,
+     int? pageNumber,
+     int? pageSize)
+        {
+            try
+            {
+                var result = await _masterservice.getAllTechnology(searchTerm, pageNumber, pageSize);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponse<List<technology>>.FailureResponse(
+                    "An error occurred while fetching technology",
+                    500,
+                    errorCode: "SERVER_ERROR"
+                ));
+            }
+        }
+
+        #endregion
+
+        #region designation
+
+
+        [HttpGet("getAllDesignation")]
+        public async Task<IActionResult> getAllDesignation(string? searchTerm = null, int? pageNumber = null,
+   int? pageSize = null)
+        {
+            try
+            {
+                var response = await _masterservice.getAllDesignation(searchTerm, pageNumber, pageSize);
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponse<List<designation>>.FailureResponse(
+                    "An error occurred while fetching designation",
+                    500,
+                    errorCode: "SERVER_ERROR"
+                ));
+            }
+        }
+
+        #endregion
     }
 }
