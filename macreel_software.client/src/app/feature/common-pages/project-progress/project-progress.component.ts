@@ -49,7 +49,7 @@ export class ProjectProgressComponent implements OnInit, AfterViewInit {
     this.paginator = new PaginatedList<Project>(
       30,
       (search, page, size) =>
-        this.projectService.getProjects(search, page, size)
+        this.projectService.getProjects(search, page, size,'')
     );
 
     this.paginator.load();

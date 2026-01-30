@@ -1686,7 +1686,7 @@ namespace Macreel_Software.DAL.Admin
         }
 
 
-        public async Task<ApiResponse<List<TaskAssignDto>>> getAllAssignTask(string? searchTerm, int? pageNumber, int? pageSize, int? empId = null)
+        public async Task<ApiResponse<List<TaskAssignDto>>> getAllAssignTask(string? searchTerm, int? pageNumber, int? pageSize, int? empId = null,string? statusTerm=null)
         {
             List<TaskAssignDto> list = new();
             int totalRecords = 0;
@@ -1698,6 +1698,7 @@ namespace Macreel_Software.DAL.Admin
                     cmd.Parameters.AddWithValue("@action", "selectAll");
                     cmd.Parameters.AddWithValue("@empId", empId.HasValue ? empId.Value : DBNull.Value);
                     cmd.Parameters.AddWithValue("@searchTerm", string.IsNullOrWhiteSpace(searchTerm) ? DBNull.Value :searchTerm);
+                    cmd.Parameters.AddWithValue("@statusTerm ", string.IsNullOrWhiteSpace(statusTerm) ? DBNull.Value : statusTerm);
                     cmd.Parameters.AddWithValue("@pageNumber", pageNumber.HasValue ? pageNumber.Value : DBNull.Value);
                     cmd.Parameters.AddWithValue("@pageSize",pageSize.HasValue ? pageSize.Value : DBNull.Value);
                     if (_conn.State != ConnectionState.Open)
