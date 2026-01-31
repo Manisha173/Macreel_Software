@@ -14,7 +14,7 @@ export interface EmployeeDetails {
   designationId: string;
   designationName: string;
 
-  // reportingManagerId: string;
+  reportingManagerId: number;
   reportingManagerName: string;
 
   emailId: string;
