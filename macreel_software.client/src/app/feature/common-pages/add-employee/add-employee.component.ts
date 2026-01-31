@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  Validators,
-  FormControl,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl, }
+  from '@angular/forms';
 import Swal from 'sweetalert2';
 import { finalize } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -20,7 +16,9 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
   standalone: false,
   styleUrls: ['./add-employee.component.css'],
 })
+
 export class AddEmployeeComponent implements OnInit {
+
   step = 1;
   isLoading = false;
   roles: any[] = [];
@@ -30,6 +28,10 @@ export class AddEmployeeComponent implements OnInit {
   cities: any[] = [];
   reportingManagers: any[] = [];
   technologies: any[] = [];
+
+  isSelfRegistration = false;
+  private accessId: string | null = null;
+
   employeeForm!: FormGroup;
   profilePic?: File;
   aadharImg?: File;
@@ -107,7 +109,7 @@ export class AddEmployeeComponent implements OnInit {
       companyName: [''],
       yearOfExperience: [''],
       technology: [''],
-      companyContactNo: [''],
+      companyContactNo: ['', Validators.pattern(/^[0-9]{10}$/)],
 
       profilePic: [null, Validators.required],
       aadharImg: [null, Validators.required],
@@ -120,8 +122,6 @@ export class AddEmployeeComponent implements OnInit {
 
 
     });
-
-
 
     //for send reg link
     this.sendLinkForm = this.fb.group({
@@ -138,8 +138,6 @@ export class AddEmployeeComponent implements OnInit {
 
     if (this.employeeId) {
       this.isEditMode = true;
-      //this.employeeForm.get('password')?.disable();
-      // this.employeeForm.get('emailId')?.disable();
 
       this.disableFileValidationForEdit();
       this.getEmployeeById(this.employeeId);
@@ -154,12 +152,6 @@ export class AddEmployeeComponent implements OnInit {
 
 
     this.checkAccessId();
-  }
-
-  limit10(e: any) {
-    if (e.target.value.length > 10) {
-      e.target.value = e.target.value.slice(0, 10);
-    }
   }
 
   private handleDepartmentChange(deptId: any): void {
@@ -185,12 +177,25 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   // get email by accessId
+  // private checkAccessId(): void {
+  //   const accessId = this.route.snapshot.queryParamMap.get('accessId');
+  //   if (accessId) {
+  //     this.getEmailByAccessId(accessId);
+  //   }
+
+  // }
+
   private checkAccessId(): void {
-    const accessId = this.route.snapshot.queryParamMap.get('accessId');
-    if (accessId) {
-      this.getEmailByAccessId(accessId);
+    this.accessId = this.route.snapshot.queryParamMap.get('accessId');
+
+    if (this.accessId) {
+      this.isSelfRegistration = true;
+
+      this.getEmailByAccessId(this.accessId);
     }
   }
+
+
   // get email by accessId
   private getEmailByAccessId(accessId: string): void {
     this.employeeService.getEmailByAccessId(accessId).subscribe({
@@ -356,12 +361,7 @@ export class AddEmployeeComponent implements OnInit {
 
             const skillIds = emp.skill.map((s: any) => s.techId);
 
-            console.log("my tech ID", skillIds)
-
-            // this.selectedTechnologies = this.technologies.filter(t =>
-            //   skillIds.includes(t.id) ||
-            //   emp.skill.some((s: any) => s.skillName === t.technologyName)
-            // );
+            console.log("my tech ID", skillIds);
 
             this.selectedTechnologies = this.technologies.filter(t =>
               skillIds.includes(t.id)
@@ -386,6 +386,11 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   nextStep(): void {
+
+    console.log('👉 Next button clicked');
+    console.log('Form Value:', this.employeeForm.value);
+    console.log('Form Status:', this.employeeForm.status);
+
     const step1Controls = [
       'empRoleId',
       'empCode',
@@ -405,7 +410,7 @@ export class AddEmployeeComponent implements OnInit {
       'stateId',
       'cityId',
 
-      
+
       'pincode',
       'bankName',
       'accountNo',
@@ -429,6 +434,8 @@ export class AddEmployeeComponent implements OnInit {
     const step1Invalid = step1Controls.some(
       (control) => this.employeeForm.get(control)?.invalid,
     );
+
+    console.log('❌ Invalid Controls:', step1Controls.filter(control => this.employeeForm.get(control)?.invalid));
 
     if (step1Invalid) {
       Swal.fire(
@@ -508,7 +515,7 @@ export class AddEmployeeComponent implements OnInit {
     const FILE_KEYS = ['profilePic', 'aadharImg', 'panImg'];
 
     Object.entries(rawValue).forEach(([key, value]) => {
-      if (FILE_KEYS.includes(key)) return; // ⛔ FILES SKIP
+      if (FILE_KEYS.includes(key)) return;
 
       if (value !== null && value !== undefined && value !== '') {
         if (Array.isArray(value)) {
@@ -553,21 +560,66 @@ export class AddEmployeeComponent implements OnInit {
       : this.employeeService.addEmployee(formData);
 
     apiCall.pipe(finalize(() => (this.isLoading = false))).subscribe({
-      next: () => {
-        Swal.fire(
-          'Success',
-          this.isEditMode
-            ? 'Employee updated successfully'
-            : 'Employee added successfully',
-          'success',
-        ).then(() => {
-          this.router.navigate(['/home/admin/employee-list']);
-          
-        });
+      // next: (res: any) => {
+      //   Swal.fire(
+      //     'Success',
+      //     res?.message || (this.isEditMode
+      //       ? 'Employee updated successfully'
+      //       : 'Employee added successfully'),
+      //     'success'
+      //   ).then(() => {
+      //     this.router.navigate(['/home/admin/employee-list']);
+      //   });
+      // },
+
+      next: (res: any) => {
+
+        if (this.isSelfRegistration) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Registration Successful',
+            text: 'Your details have been submitted successfully. Your account will be activated after admin approval.',
+            confirmButtonText: 'OK'
+          }).then(() => {
+            //this.router.navigate(['/login']);
+          });
+
+        } else {
+          Swal.fire(
+            'Success',
+            res?.message || (this.isEditMode
+              ? 'Employee updated successfully'
+              : 'Employee added successfully'),
+            'success'
+          ).then(() => {
+            this.router.navigate(['/home/admin/employee-list']);
+          });
+        }
       },
-      error: () => {
-        Swal.fire('Error', 'API Error occurred', 'error');
-      },
+      error: (err) => {
+        console.log('API ERROR:', err);
+
+        let message = 'Something went wrong. Please try again';
+
+        // ASP.NET Core validation errors
+        if (err?.error?.errors) {
+          const validationErrors = err.error.errors;
+
+          message = Object.values(validationErrors)
+            .flat()
+            .join('\n');
+        }
+        // Normal backend custom message
+        else if (err?.error?.message) {
+          message = err.error.message;
+        }
+        // Case 3: Default title
+        else if (err?.error?.title) {
+          message = err.error.title;
+        }
+
+        Swal.fire('Error', message, 'error');
+      }
     });
   }
 
