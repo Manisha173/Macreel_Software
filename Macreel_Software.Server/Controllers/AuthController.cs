@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Threading.Tasks;
 using Macreel_Software.DAL;
 using Macreel_Software.DAL.Auth;
 using Macreel_Software.Models;
@@ -187,7 +188,7 @@ namespace Macreel_Software.Server.Controllers
         }
 
         [HttpPost("verify-otp")]
-        public IActionResult VerifyOtp([FromBody] verifyOtpRequest data)
+        public async  Task<IActionResult> VerifyOtp([FromBody] verifyOtpRequest data)
         {
             try
             {
@@ -232,28 +233,45 @@ namespace Macreel_Software.Server.Controllers
             }
         }
 
-        //[HttpPost("reset-password")]
-        //public IActionResult ResetPassword(ResetPasswordRequest data)
-        //{
-        //    var verifyKey = $"OTP_Verify_{data.Email}";
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordRequest data)
+        {
+            var verifyKey = $"OTP_Verified_{data.Email}";
 
-        //    if (!_cache.TryGetValue(verifyKey, out bool isVerified) || !isVerified)
-        //        return BadRequest(new
-        //        {
-        //            status=false,
-        //            message="OTP not verified!!"
-        //        });
+            if (!_cache.TryGetValue(verifyKey, out bool isVerified) || !isVerified)
+                return BadRequest(new
+                {
+                    status = false,
+                    message = "OTP not verified!!"
+                });
 
+            int? user_id = await _authServices.GetUserIdByEmailId(data.Email);
 
-        //    var userId = _authServices.GetUserIdByEmailId(data.Email);
-        //    string pass = data.NewPassword;
+            if (user_id == null)
+                return BadRequest(new
+                {
+                    status = false,
+                    message = "User not found"
+                });
 
-        //    data.NewPassword = _pass.EncryptPassword(data.NewPassword!);
+            var encryptedPassword = _pass.EncryptPassword(data.NewPassword);
 
-         
+            var result = await _authServices.UpdatePassword(encryptedPassword, user_id);
 
+            if (!result)
+                return BadRequest(new
+                {
+                    status = false,
+                    message = "Password update failed"
+                });
 
-        //}
+            return Ok(new
+            {
+                status = true,
+                message = "Password updated successfully"
+            });
+        }
+
 
     }
 }

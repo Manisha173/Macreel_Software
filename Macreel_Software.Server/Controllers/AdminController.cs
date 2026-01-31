@@ -148,7 +148,7 @@ namespace Macreel_Software.Server.Controllers
 
                     await _mailservice.SendMailAsync(mailRequest);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     throw;
                 }
