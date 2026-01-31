@@ -10,6 +10,7 @@
     <PackageReference Include="EPPlus" Version="8.4.0" />
     <PackageReference Include="FirebaseAdmin" Version="3.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="10.0.2" />
     <PackageReference Include="QuestPDF" Version="2025.12.1" />
   </ItemGroup>
 

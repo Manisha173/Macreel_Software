@@ -7,15 +7,13 @@ using Macreel_Software.DAL.Auth;
 using Macreel_Software.DAL.Common;
 using Macreel_Software.DAL.Master;
 using Macreel_Software.DAL.Employee;
-using Macreel_Software.Server;
-using Macreel_Software.Server.DTOs;
-using Macreel_Software.Services;
 using Macreel_Software.Services.AttendanceUpload;
 using Macreel_Software.Services.FileUpload.Services;
 using Macreel_Software.Services.FirebaseNotification;
 using Macreel_Software.Services.MailSender;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+
 using OfficeOpenXml;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -47,7 +45,15 @@ builder.Services.AddScoped<IEmployeeService, EmployeeServices>();
 builder.Services.AddScoped<FileUploadService>();
 builder.Services.AddScoped<MailSender>();
 builder.Services.AddScoped<PasswordEncrypt>();
-builder.Services.AddMemoryCache();
+//builder.Services.AddMemoryCache();
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "localhost:6379";
+
+    //options.Configuration = "127.0.0.1:6379";
+    options.InstanceName = "AuthApp:";
+});
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular",
