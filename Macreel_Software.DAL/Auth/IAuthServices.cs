@@ -18,6 +18,7 @@ namespace Macreel_Software.DAL.Auth
         Task<bool> RevokeRefreshTokenAsync(string refreshToken);
         Task<int?> CheckUserExistOrNot(string email);
         Task<int?> GetUserIdByEmailId(string email);
+        Task<bool> UpdatePassword(string encryptedPassword, int? userId);
     }
     
 }
