@@ -39,7 +39,7 @@
         {icon:'fa-briefcase', label:'Designation', value: employee.designationName},
         {icon:'fa-calendar-check', label:'Joining Date', value: employee.dateOfJoining ? (employee.dateOfJoining | date) : '—'},
         {icon:'fa-money-bill-wave', label:'Salary', value: employee.salary ? (employee.salary | currency:'INR') : '—'},
-        {icon:'fa-user-tie', label:'Reporting Manager', value: employee.reportingManagerName},
+        {icon:'fa-user-tie', label:'Reporting Manager', value: employee.reportingManagerId === 0 ?'Admin' : employee.reportingManagerName || '—'},
         {icon:'fa-briefcase', label:'Experience', value: employee.yearOfExperience ? (employee.yearOfExperience + ' yrs') : '—'}
       ]">
         <div class="flex items-center gap-3">
