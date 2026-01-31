@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Security.Cryptography.Pkcs;
 using Macreel_Software.Models;
 using Macreel_Software.Services.MailSender;
 using Microsoft.AspNetCore.Http;
@@ -259,10 +260,29 @@ namespace Macreel_Software.DAL.Auth
 
         }
 
-        //public async Task<bool> updatePassword(ResetPasswordRequest data,int UserId)
-        //{
-        //    using SqlConnection con = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
-        //}
+        public async Task<bool> UpdatePassword(string encryptedPassword, int? userId)
+        {
+            using SqlConnection con = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+
+            try
+            {
+                using SqlCommand cmd = new SqlCommand("sp_Login", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@action", "UpdatePasswordById");
+                cmd.Parameters.AddWithValue("@Password", encryptedPassword);
+                cmd.Parameters.AddWithValue("@UserId", userId);
+
+                if (con.State == ConnectionState.Closed)
+                    await con.OpenAsync();
+
+                int res = await cmd.ExecuteNonQueryAsync();
+                return res > 0;
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+        }
 
     }
 }

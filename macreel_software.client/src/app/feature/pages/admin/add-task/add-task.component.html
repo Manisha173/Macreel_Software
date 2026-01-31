@@ -129,7 +129,7 @@
     </div>
 
     <!--Status for task update-->
-    <div *ngIf="editTask" class="mb-4">
+    <div *ngIf="editTask && editTask.adminTaskStatus !== 'Completed'" class="mb-4">
       <label class="block text-sm font-medium text-gray-600 mb-1">Status</label>
       <select
         formControlName="adminstatus"

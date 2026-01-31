@@ -27,7 +27,7 @@ export class ManageMasterdataService {
     if (pageSize !== null) params = params.set('pageSize', pageSize);
     if (searchText) params = params.set('searchTerm', searchText); // your API expects searchTerm
 
-    return this.http.get<any>(`${this.baseUrl}Common/getAllRole`, { params });
+    return this.http.get<any>(`${this.baseUrl}Common/getAllRole`, { params, withCredentials:true });
   }
 
   getRoleById(id: number) {
