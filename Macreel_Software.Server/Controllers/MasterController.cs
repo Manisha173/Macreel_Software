@@ -710,5 +710,27 @@ namespace Macreel_Software.Server.Controllers
             }
         }
         #endregion
+
+
+        [HttpGet("GetAllTechnologyById")]
+        public async Task<IActionResult> getTechnologyById(int techId)
+        {
+            try
+            {
+                var response = await _service.getAllTechnologyById(techId);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponse<List<technology>>.FailureResponse(
+                    "An error occurred while fetching technology.",
+                    500,
+                    "SERVER_ERROR"
+                ));
+            }
+        }
+
+
+
     }
 }
