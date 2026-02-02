@@ -81,7 +81,6 @@ export class AddDepartmentComponent implements OnInit {
       id: this.editingDepartmentId || 0,
       departmentName: this.departmentName
     };
-
     this.master.addOrUpdateDepartment(payload).subscribe({
       next: () => {
         Swal.fire({
@@ -119,16 +118,13 @@ export class AddDepartmentComponent implements OnInit {
   editDepartment(row: DepartmentRow) {
     this.master.getDepartmentById(row.id).subscribe({
       next: (res) => {
-
-        // ✅ API response ke hisaab se
+     
         if (res.success && res.data?.length) {
 
           const dept = res.data[0];
-
-          // ✅ FORM BIND
+       
           this.departmentName = dept.departmentName;
-
-          // ✅ ID SET (VERY IMPORTANT)
+    
           this.editingDepartmentId = dept.id;
 
         } else {
@@ -140,8 +136,6 @@ export class AddDepartmentComponent implements OnInit {
       }
     });
   }
-
-
 
   // ================= DELETE =================
   deleteDepartment(row: DepartmentRow) {

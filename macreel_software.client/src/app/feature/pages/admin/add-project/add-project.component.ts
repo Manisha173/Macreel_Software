@@ -455,15 +455,15 @@ export class AddProjectComponent implements OnInit {
         this.showMobileEmpError = true;
         hasError = true;
       }
-      
+
     }
     // ========== SOFTWARE TYPE VALIDATION ==========
-      if (f.category === 'Software' || f.category === 'Website') {
-        if (!f.isMobileSoftware && !f.isWebSoftware) {
-          this.showSoftwareTypeError = true;
-          hasError = true;
-        }
+    if (f.category === 'Software' || f.category === 'Website') {
+      if (!f.isMobileSoftware && !f.isWebSoftware) {
+        this.showSoftwareTypeError = true;
+        hasError = true;
       }
+    }
 
     // ========== WEB VALIDATION ==========
     if (f.isWebSoftware) {

@@ -1,5 +1,4 @@
 <div class="panel-header panel-header-sm"></div>
-
 <div class="content px-3 py-2">
 
   <!-- ================= FORM ================= -->
@@ -43,7 +42,6 @@
 
     <!-- HEADER -->
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-1">
-
       <!-- TITLE -->
       <h1 class="ml-2 text-lg md:text-[16px] font-semibold text-[#444] text-center md:text-left">
         Department List
@@ -62,10 +60,7 @@
            absolute left-3 top-1/2 -translate-y-1/2
            text-gray-400 text-sm">
           </i>
-        </div>
-
-        
-        
+        </div>            
       </div>
 
     </div>
@@ -75,11 +70,8 @@
     [data]="data"
     (edit)="editDepartment($event)"
     (delete)="deleteDepartment($event)"
-    >
-          
+    >          
         </app-generic-table>
-    
-
-
+  
   </div>
 </div>

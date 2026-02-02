@@ -84,10 +84,7 @@ export class AddDesignationComponent implements OnInit {
         this.cancelEdit();
         this.loadDesignations();
       },
-      // error: (err) => {
-      //   console.error(err);
-      //   Swal.fire('Error', 'Save failed', 'error');
-      // }
+    
       error: (err) => {
         console.error('API Error 👉', err);
 
@@ -106,21 +103,16 @@ export class AddDesignationComponent implements OnInit {
     });
   }
 
-
   // ================= EDIT =================
   editDesignation(row: DesignationElement) {
     this.master.getDesignationById(row.id).subscribe({
-      next: (res) => {
-
-        // ✅ API response ke according
+      next: (res) => {      
         if (res.success && res.data?.length) {
 
           const data = res.data[0];
 
-          // ✅ FORM BIND
           this.designationName = data.designationName;
 
-          // ✅ ID SET (MOST IMPORTANT)
           this.editingDesignationId = data.id;
 
         } else {
