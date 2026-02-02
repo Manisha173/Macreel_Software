@@ -42,17 +42,18 @@
 
     public class ForgetPasswordRequest
     {
-        public string Email { set; get; }
-    }
-    public class verifyOtpRequest
-    {
         public string Email { get; set; }
+    }
+
+    public class VerifyOtpRequest
+    {
         public string Otp { get; set; }
     }
+
     public class ResetPasswordRequest
     {
-        public string Email { get; set; }
         public string NewPassword { get; set; }
     }
+
 
 }

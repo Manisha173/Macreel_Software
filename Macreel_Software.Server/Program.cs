@@ -7,9 +7,6 @@ using Macreel_Software.DAL.Auth;
 using Macreel_Software.DAL.Common;
 using Macreel_Software.DAL.Master;
 using Macreel_Software.DAL.Employee;
-using Macreel_Software.Server;
-using Macreel_Software.Server.DTOs;
-using Macreel_Software.Services;
 using Macreel_Software.Services.AttendanceUpload;
 using Macreel_Software.Services.FileUpload.Services;
 using Macreel_Software.Services.FirebaseNotification;
@@ -47,7 +44,21 @@ builder.Services.AddScoped<IEmployeeService, EmployeeServices>();
 builder.Services.AddScoped<FileUploadService>();
 builder.Services.AddScoped<MailSender>();
 builder.Services.AddScoped<PasswordEncrypt>();
-builder.Services.AddMemoryCache();
+//builder.Services.AddMemoryCache();
+//if (builder.Environment.IsDevelopment())
+//{
+//    builder.Services.AddDistributedMemoryCache();
+//}
+//else
+//{
+//    builder.Services.AddStackExchangeRedisCache(options =>
+//    {
+//        options.Configuration = "127.0.0.1:6379";
+//        options.InstanceName = "AuthApp:";
+//    });
+//}
+
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular",
@@ -94,9 +105,9 @@ builder.Services.AddAuthentication(options =>
         OnMessageReceived = context =>
         {
             var authHeader = context.Request.Headers["Authorization"].FirstOrDefault();
-            if(!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Bearer "))
+            if(!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Bearer"))
             {
-                context.Token = authHeader.Substring("Bearer ".Length);
+                context.Token = authHeader.Substring("Bearer".Length);
                 return Task.CompletedTask;
             }
 
