@@ -116,7 +116,7 @@
             </label>
             <label class="flex items-center gap-2" *ngIf="category === 'Software' || category === 'Website'">
 
-              <input type="checkbox" formControlName="isWebSoftware" (change)="clearSoftwareTypeError()"/> Web
+              <input type="checkbox" formControlName="isWebSoftware" (change)="clearSoftwareTypeError()" /> Web
             </label>
           </div>
           <p *ngIf="showSoftwareTypeError" class="text-red-600 text-sm mt-1">
@@ -136,9 +136,9 @@
               <input type="checkbox" formControlName="isIOS" (change)="clearFieldError('mobilePlatform')" /> iOS
             </label>
           </div>
-           <p *ngIf="showMobilePlatformError" class="text-red-600 text-sm mt-1">
-              Please select at least one: Android or iOS
-            </p>
+          <p *ngIf="showMobilePlatformError" class="text-red-600 text-sm mt-1">
+            Please select at least one: Android or iOS
+          </p>
 
           <div class="relative mt-3" *ngIf="isAndroid || isIOS">
             <select formControlName="mobileSkill" (change)="clearFieldError('mobileSkill')" class="peer w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700
@@ -158,8 +158,8 @@
           </div>
 
           <div class="relative mt-3" *ngIf="(isAndroid || isIOS) && filteredMobileEmployees.length">
-            <select formControlName="mobileEmpId" (change)="onSelectMobileEmployee()"
-              (change)="clearFieldError('mobileEmp')" class="peer w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700
+            <select formControlName="mobileEmpId" (change)="onSelectMobileEmployee(); clearFieldError('mobileEmp')"
+              class="peer w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700
         focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none">
               <option value="">Select Mobile Employee</option>
               <option *ngFor="let emp of filteredMobileEmployees" [value]="emp.empId">{{ emp.empName }}</option>
@@ -197,7 +197,7 @@
           </div>
 
           <div class="relative mt-3" *ngIf="filteredWebEmployees.length">
-            <select formControlName="webEmpId" (change)="onSelectWebEmployee()" (change)="clearFieldError('webEmp')"
+            <select formControlName="webEmpId" (change)="onSelectWebEmployee(); clearFieldError('webEmp')"
               class="peer w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700
                  focus:border-[#C5192F] focus:ring-2 focus:ring-[#C5192F]/30 outline-none">
               <option value="">Select Web Employee</option>
