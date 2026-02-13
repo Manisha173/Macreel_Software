@@ -68,23 +68,13 @@
              absolute left-3 top-1/2 -translate-y-1/2
              text-gray-400 text-sm">
           </i>
-        </div>
-
-        <!-- PAGINATOR -->
- 
-
+        </div>    
       </div>
 
     </div>
 
+    <app-generic-table [columns]="leaves" [data]="data" (edit)="onEdit($event)" (delete)="onDelete($event)">
+    </app-generic-table>
 
-     <app-generic-table
-  [columns]="leaves"
-  [data]="data"
-  (edit)="onEdit($event)"
-  (delete)="onDelete($event)"
- >
-</app-generic-table>
-   
   </div>
 </div>

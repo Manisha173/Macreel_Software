@@ -560,18 +560,7 @@ export class AddEmployeeComponent implements OnInit {
       : this.employeeService.addEmployee(formData);
 
     apiCall.pipe(finalize(() => (this.isLoading = false))).subscribe({
-      // next: (res: any) => {
-      //   Swal.fire(
-      //     'Success',
-      //     res?.message || (this.isEditMode
-      //       ? 'Employee updated successfully'
-      //       : 'Employee added successfully'),
-      //     'success'
-      //   ).then(() => {
-      //     this.router.navigate(['/home/admin/employee-list']);
-      //   });
-      // },
-
+     
       next: (res: any) => {
 
         if (this.isSelfRegistration) {
@@ -581,7 +570,7 @@ export class AddEmployeeComponent implements OnInit {
             text: 'Your details have been submitted successfully. Your account will be activated after admin approval.',
             confirmButtonText: 'OK'
           }).then(() => {
-            //this.router.navigate(['/login']);
+            this.router.navigate(['/login']);
           });
 
         } else {
